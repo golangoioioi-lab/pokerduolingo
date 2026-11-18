@@ -14,12 +14,23 @@ const inCi = !!process.env.CI;
 
 const run = (label, cmd, args, env = {}) => {
   console.log(`\n\x1b[1m▶ ${label}\x1b[0m`);
-  const r = spawnSync(cmd, args, { cwd: ROOT, shell: isWin, stdio: ['inherit', 'inherit', 'pipe'], encoding: 'utf8', env: { ...process.env, CI: '1', ...env } });
+  const gha = !!process.env.GITHUB_ACTIONS;
+  const r = spawnSync(cmd, args, { cwd: ROOT, shell: isWin, stdio: ['inherit', gha ? 'pipe' : 'inherit', 'pipe'], encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, env: { ...process.env, CI: '1', ...env } });
+  if (gha) process.stdout.write(r.stdout ?? '');
   const err = r.stderr ?? '';
   process.stderr.write(err.split('\n').filter((l) => !l.includes('UV_HANDLE_CLOSING')).join('\n'));
   // Windows: wrangler can hit a libuv assertion while exiting after the command already succeeded.
   const benign = /UV_HANDLE_CLOSING/.test(err) && !/ERROR|✘/.test(err);
-  if (r.status !== 0 && !benign) { console.error(`\n\x1b[31m✗ ${label} に失敗しました\x1b[0m`); process.exit(r.status ?? 1); }
+  if (r.status !== 0 && !benign) {
+    console.error(`\n\x1b[31m✗ ${label} に失敗しました\x1b[0m`);
+    // GitHub Actions: show the reason as an annotation (readable without opening the logs).
+    if (gha) {
+      // eslint-disable-next-line no-control-regex
+      const tail = `${r.stdout ?? ''}\n${err}`.replace(/\x1b\[[0-9;]*m/g, '').split('\n').filter((l) => l.trim()).slice(-20).join('\n');
+      console.log(`::error title=${label}::${(tail || `exit ${r.status}`).replace(/%/g, '%25').replace(/\r/g, '').replace(/\n/g, '%0A')}`);
+    }
+    process.exit(r.status ?? 1);
+  }
 };
 
 const toml = readFileSync(join(ROOT, 'wrangler.toml'), 'utf8');
