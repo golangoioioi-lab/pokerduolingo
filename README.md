@@ -17,10 +17,12 @@ npm run lint
 
 今は有料プランを止めていて、全レッスン・全機能が無料です（`VITE_PAID_PLANS=true` で Pro とペイウォールが戻ります）。
 
-## 公開（自動）
+## 公開（push で自動）
 
-`main` に push すると GitHub Actions（`.github/workflows/deploy.yml`）がテスト → DB 更新 → ビルド → Cloudflare Pages へ公開します。
-初回だけ GitHub のリポジトリ設定で Secrets `CLOUDFLARE_API_TOKEN` `CLOUDFLARE_ACCOUNT_ID` と Variable `VITE_GOOGLE_CLIENT_ID` を登録してください。
+`npm install` すると git の pre-push フックが有効になり、`main` を push するとこの PC から
+テスト → DB 更新 → ビルド → Cloudflare Pages へ公開してから push します（失敗したら push しません）。
+事前に `npx wrangler login` 済みであること。公開せずに push だけしたいときは `SKIP_DEPLOY=1 git push`。
+手動で公開だけするなら `npm run deploy`。
 
 ## 構成
 

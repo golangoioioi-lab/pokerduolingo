@@ -8,9 +8,9 @@
 # Server secrets (Stripe keys) stay in Cloudflare; `npm run setup` puts them there.
 name: deploy
 
+# Not used now: deploys run on your machine via the pre-push hook (.githooks/pre-push).
+# Manual run only (Actions tab → deploy → Run workflow), once the secrets above are set.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 concurrency:

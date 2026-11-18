@@ -1,0 +1,10 @@
+#!/bin/sh
+# Pushing main deploys from this machine first (test → DB → build → Cloudflare Pages).
+# The push goes through only if the deploy succeeds. Skip once with: SKIP_DEPLOY=1 git push
+[ -n "$SKIP_DEPLOY" ] && exit 0
+deploy=0
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$remote_ref" = "refs/heads/main" ] && deploy=1
+done
+[ "$deploy" = 1 ] || exit 0
+npm run deploy
