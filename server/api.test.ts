@@ -33,7 +33,7 @@ beforeAll(async () => {
   const { publicKey, privateKey } = await generateKeyPair('RS256');
   signKey = privateKey;
   setGoogleKeysForTest(createLocalJWKSet({ keys: [{ ...(await exportJWK(publicKey)), kid: 'k1', alg: 'RS256' }] }));
-});
+}, 120_000); // first Miniflare start (fresh checkout / CI) can take a while
 afterAll(async () => { setGoogleKeysForTest(null); await proxy?.dispose(); });
 beforeEach(async () => {
   for (const t of ['attempts', 'progress', 'entitlements', 'sessions', 'stripe_events', 'users']) await env.DB.prepare(`DELETE FROM ${t}`).run();
