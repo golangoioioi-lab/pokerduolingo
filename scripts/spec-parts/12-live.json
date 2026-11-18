@@ -1,0 +1,65 @@
+{
+  "courses": [
+    {
+      "id": "live",
+      "title": "ライブポーカー",
+      "level": "初級",
+      "symbol": "生",
+      "description": "カジノやポーカールームで遊ぶための、進行、ルール、マナー、ライブ特有の戦略を学びます。",
+      "lessons": [
+        "live-vs-online",
+        "live-table-flow",
+        "live-chips",
+        "live-string-bet",
+        "live-reading-players",
+        "live-larger-sizings",
+        "live-passive-loose",
+        "live-etiquette",
+        "live-bankroll",
+        "live-tournament-day"
+      ]
+    }
+  ],
+  "lessons": {
+    "live-vs-online": {
+      "title": "ライブとオンラインの違い",
+      "summary": "実際のテーブルで遊ぶライブポーカーが、オンラインと何が違うのかを整理します。"
+    },
+    "live-table-flow": {
+      "title": "テーブルの流れと席につくまで",
+      "summary": "着席から1ハンドの進行まで、ライブ特有の流れとディーラーの役割を整理します。"
+    },
+    "live-chips": {
+      "title": "チップとポットの数え方",
+      "summary": "額面の違うチップの扱い、スタックの整理、ポットの大きさを素早く把握する方法です。"
+    },
+    "live-string-bet": {
+      "title": "ストリングベットと宣言のルール",
+      "summary": "声とチップによるベットの決まりごとと、よくあるルール違反を理解します。"
+    },
+    "live-reading-players": {
+      "title": "相手の一般的な傾向を観察する",
+      "summary": "細かなクセではなく、プレイの頻度とベットの傾向から、相手のタイプを見分けます。"
+    },
+    "live-larger-sizings": {
+      "title": "ライブでのサイズの調整",
+      "summary": "ライブではオンラインより大きく賭けるのが普通です。理由と、具体的な目安を学びます。"
+    },
+    "live-passive-loose": {
+      "title": "ルーズで受け身な相手への対処",
+      "summary": "よく参加してよくコールする相手には、薄いバリューを取り、ブラフを減らします。"
+    },
+    "live-etiquette": {
+      "title": "ライブのマナーとエチケット",
+      "summary": "ショーダウンの順番、カードの扱い、会話の注意など、気持ちよく遊ぶための決まりごとです。"
+    },
+    "live-bankroll": {
+      "title": "ライブの資金管理",
+      "summary": "ハンド数が少なく、コストがかかるライブでの、バンクロールの考え方を整理します。"
+    },
+    "live-tournament-day": {
+      "title": "ライブトーナメント当日の準備",
+      "summary": "会場に着くところから、スタック管理、休憩まで、トーナメント当日の流れと準備を整理します。"
+    }
+  }
+}

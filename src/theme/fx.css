@@ -1,0 +1,77 @@
+/* =================== reward motion (kept subtle) =================== */
+
+/* quiz answers */
+.lb-opt.correct { animation: opt-pop 0.3s ease-out; position: relative; }
+.lb-opt.correct::after {
+  content: "✓"; position: absolute; right: 14px; top: 50%; width: 24px; height: 24px; margin-top: -12px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 14px; font-weight: 800; background: var(--ion-color-success); color: #fff;
+  animation: check-in 0.25s ease-out both;
+}
+.lb-opt.wrong { animation: opt-shake 0.3s ease; }
+@keyframes opt-pop { 0% { transform: scale(1); } 45% { transform: scale(1.015); } 100% { transform: scale(1); } }
+@keyframes check-in { 0% { transform: scale(0.4); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes opt-shake { 0%, 100% { transform: translateX(0); } 30% { transform: translateX(-4px); } 60% { transform: translateX(3px); } }
+.lb-quiz-explain { animation: rise-in 0.3s ease-out both; }
+@keyframes rise-in { 0% { transform: translateY(8px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+
+/* milestone combo pill (5, 10, ...) */
+.float-xp {
+  position: fixed; z-index: 99999; transform: translate(-50%, 0); pointer-events: none; white-space: nowrap;
+  font: 700 13px/1 'Inter Variable', system-ui, sans-serif; letter-spacing: 0.06em;
+  color: var(--ink-contrast); background: var(--ink); padding: 6px 11px; border-radius: 999px;
+  animation: float-up 1s ease-out forwards;
+}
+@keyframes float-up {
+  0% { transform: translate(-50%, 0); opacity: 0; }
+  20% { transform: translate(-50%, -10px); opacity: 1; }
+  100% { transform: translate(-50%, -44px); opacity: 0; }
+}
+
+/* practice combo label */
+.streak { display: inline-block; font-variant-numeric: tabular-nums; }
+.streak.hot {
+  font-weight: 700; letter-spacing: 0.06em; font-size: 12px; padding: 3px 9px; border-radius: 999px;
+  color: var(--app-label); border: 1px solid var(--app-label-3); animation: check-in 0.25s ease-out both;
+}
+
+/* ---------- completion screen ---------- */
+.celebrate { gap: 4px; }
+.cel-title { animation: rise-in 0.35s ease-out both; }
+.cel-stat, .cel-badge { animation: rise-in 0.35s ease-out var(--d, 0s) both; }
+.cel-flame ion-icon { color: var(--flame); }
+.cel-badge { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 60%, transparent); }
+
+.xp-ring { position: relative; width: 200px; height: 200px; margin: 18px 0 6px; display: grid; place-items: center; }
+.xp-ring svg { position: absolute; inset: 0; }
+.xp-track { stroke: var(--app-fill-2); }
+.xp-fill { stroke: var(--ink); transition: stroke 0.3s; }
+.celebrate.levelup .xp-fill { stroke: var(--gold); }
+.xp-ring.flash { animation: ring-flash 0.6s ease-out; }
+@keyframes ring-flash {
+  0% { filter: drop-shadow(0 0 0 rgba(245, 197, 24, 0)); transform: scale(1); }
+  35% { filter: drop-shadow(0 0 18px rgba(245, 197, 24, 0.7)); transform: scale(1.04); }
+  100% { filter: drop-shadow(0 0 0 rgba(245, 197, 24, 0)); transform: scale(1); }
+}
+.xp-center { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.xp-gain { font-size: 48px; font-weight: 800; letter-spacing: -0.05em; line-height: 1; color: var(--app-label); font-variant-numeric: tabular-nums; }
+.xp-gain small { font-size: 15px; font-weight: 700; margin-left: 4px; letter-spacing: 0; color: var(--app-label-2); }
+.xp-level { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--app-label-2); animation: check-in 0.3s ease-out both; }
+.celebrate.levelup .xp-level { color: var(--app-label); }
+.xp-next { margin: 0 0 18px; font-size: 13px; color: var(--app-label-2); }
+.xp-next b { color: var(--app-label); font-variant-numeric: tabular-nums; }
+
+/* path: quick cascade on first paint */
+.path-step { animation: node-in 0.3s ease-out both; }
+.path-step:nth-child(2) { animation-delay: 0.03s; } .path-step:nth-child(3) { animation-delay: 0.06s; }
+.path-step:nth-child(4) { animation-delay: 0.09s; } .path-step:nth-child(n+5) { animation-delay: 0.12s; }
+@keyframes node-in { 0% { opacity: 0; transform: translateY(6px); } 100% { opacity: 1; } }
+.path-step { animation-fill-mode: backwards; }
+
+/* status bar: a small bump when a number changes */
+.gb-item b { display: inline-block; animation: bump 0.3s ease-out; }
+@keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.15); } 100% { transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-opt.correct, .lb-opt.wrong, .lb-opt.correct::after, .lb-quiz-explain, .streak.hot, .cel-title, .cel-stat, .cel-badge,
+  .xp-ring.flash, .xp-level, .path-step, .gb-item b { animation: none !important; }
+}

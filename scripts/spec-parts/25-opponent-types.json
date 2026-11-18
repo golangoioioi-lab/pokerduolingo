@@ -1,0 +1,39 @@
+{
+  "courses": [
+    {
+      "id": "opponent-types",
+      "title": "相手のタイプ別の戦い方",
+      "level": "中級",
+      "symbol": "♟",
+      "description": "スタッツと行動から相手のタイプを見抜き、サイズ・ブラフ頻度・3betを相手ごとに調整します。",
+      "lessons": [
+        "opp-stats-basics",
+        "opp-player-map",
+        "opp-tight-passive",
+        "opp-calling-station",
+        "opp-station-bluffs",
+        "opp-tag",
+        "opp-lag",
+        "opp-maniac",
+        "opp-nit",
+        "opp-recreational",
+        "opp-live-reads",
+        "opp-adjust-limits"
+      ]
+    }
+  ],
+  "lessons": {
+    "opp-stats-basics": { "title": "スタッツで相手を読む", "summary": "VPIP・PFR・3bet・AFの意味と、何ハンドで信用できるかを学びます。" },
+    "opp-player-map": { "title": "4つのタイプの地図", "summary": "タイト／ルースとパッシブ／アグレッシブの2軸で相手を分類します。" },
+    "opp-tight-passive": { "title": "タイトパッシブへの対応", "summary": "参加が少なくベットもしない相手から、ブラインドとポットを取る方法。" },
+    "opp-calling-station": { "title": "コーリングステーションから取る", "summary": "降りない相手には大きくバリューベットし、薄いバリューも打ちます。" },
+    "opp-station-bluffs": { "title": "ステーションにブラフしない", "summary": "フォールド率からブラフのEVを計算し、ブラフを減らす理由を確認します。" },
+    "opp-tag": { "title": "TAGとの戦い方", "summary": "基本に忠実な相手には、レンジの読みやすさを逆に使います。" },
+    "opp-lag": { "title": "LAGとの戦い方", "summary": "広く攻める相手には、3betとコールダウンを広げて対抗します。" },
+    "opp-maniac": { "title": "マニアックへの対応", "summary": "何でも打つ相手には、自分からは打たずに受けて取ります。" },
+    "opp-nit": { "title": "ニットへの対応", "summary": "強い手しか続けない相手には、スチールを増やし、反撃には素直に降ります。" },
+    "opp-recreational": { "title": "レクリエーショナルプレイヤー", "summary": "楽しみで遊ぶ相手の特徴と、長く同じ卓で戦うための考え方。" },
+    "opp-live-reads": { "title": "スタッツがないときの読み", "summary": "ライブや初対面の相手を、ショーダウンとベットの癖から分類します。" },
+    "opp-adjust-limits": { "title": "エクスプロイトの限界", "summary": "サンプル不足、相手の調整、自分の偏りなど、読みすぎの落とし穴。" }
+  }
+}

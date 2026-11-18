@@ -1,0 +1,110 @@
+import type { LessonBody } from '../../types';
+
+const lesson: LessonBody = {
+  id: 'drill-combos-blockers',
+  blocks: [
+    {
+      t: 'p',
+      text: '自分の手札も、ボードと同じように相手のコンボを減らします。これが「ブロッカー」で、3betやリバーのブラフ選びに使う計算です。',
+    },
+    { t: 'h', text: 'おさらい：手札もデッドカード' },
+    {
+      t: 'p',
+      text: '計算の手順はボードのときと同じです。相手の手札に使えるカードを、ランクごとに「残り何枚か」で数えます。',
+    },
+    {
+      t: 'list',
+      items: [
+        'ペア：残り枚数 n から2枚を選ぶ。n = 4 → 6、n = 3 → 3、n = 2 → 1',
+        'ペアでない手：ランクAの残り枚数 × ランクBの残り枚数',
+        'スーテッドは「同じスートで両方とも残っているスート」の数',
+      ],
+    },
+    { t: 'h', text: '図で確認' },
+    {
+      t: 'combos',
+      groups: [
+        { label: 'AA', hands: ['AA'] },
+        { label: 'KK', hands: ['KK'] },
+        { label: 'AK', hands: ['AK'] },
+      ],
+      dead: ['As', 'Kd'],
+      caption: 'A♠K♦ を持つとき：AA 3、KK 3、AK 9。何も持たないときの28コンボが15コンボに減ります。',
+    },
+    {
+      t: 'combos',
+      groups: [
+        { label: 'KK（セット）', hands: ['KK'] },
+        { label: 'AK', hands: ['AK'] },
+        { label: 'K8（ツーペア）', hands: ['K8'] },
+      ],
+      dead: ['Kh', '8d', '3c', 'Kc', 'Jd'],
+      caption: 'ボード K♥ 8♦ 3♣ で K♣J♦ を持つとき：KK 1、AK 8、K8 6。Kが2枚見えているので、Kを含む手は大きく減ります。',
+    },
+    { t: 'h', text: '練習問題' },
+    {
+      t: 'estimate',
+      q: 'あなたは A♠K♦。相手のAAは何コンボ？',
+      hand: ['As', 'Kd'],
+      min: 0,
+      max: 10,
+      step: 1,
+      unit: 'コンボ',
+      answer: 3,
+      tolerance: 0.5,
+      explain: 'Aは残り3枚（A♥ A♦ A♣）。3枚から2枚で3コンボです。',
+    },
+    {
+      t: 'estimate',
+      q: 'あなたは A♠K♦。相手のAKは何コンボ？',
+      hand: ['As', 'Kd'],
+      min: 0,
+      max: 20,
+      step: 1,
+      unit: 'コンボ',
+      answer: 9,
+      tolerance: 0.5,
+      explain: 'Aが残り3枚、Kが残り3枚なので 3 × 3 = 9コンボ。片方だけ持つと12、両方持つと9です。',
+    },
+    {
+      t: 'quiz',
+      q: 'あなたは Q♠Q♥。相手のレンジが QQ+ と AK のとき、合計何コンボ？',
+      options: ['29', '34', '28', '23'],
+      answer: 0,
+      hand: ['Qs', 'Qh'],
+      explain: 'AA 6 + KK 6 + QQ 1（残り Q♦Q♣ のみ）+ AK 16 = 29コンボ。何も持たないときは34コンボです。',
+    },
+    {
+      t: 'estimate',
+      q: 'あなたは A♠K♦。相手のレンジが AA・KK・QQ・AK のとき、合計何コンボ？',
+      hand: ['As', 'Kd'],
+      min: 0,
+      max: 40,
+      step: 1,
+      unit: 'コンボ',
+      answer: 21,
+      tolerance: 2,
+      explain: 'AA 3 + KK 3 + QQ 6 + AK 9 = 21コンボ。QQはブロックしていないので6のままです。AKを持つと、相手の強い手が約4割減ります。',
+    },
+    {
+      t: 'estimate',
+      q: 'あなたは K♣J♦。相手の「KKとAK」は合計何コンボ？（Kを持っていなければ15コンボ）',
+      hand: ['Kc', 'Jd'],
+      board: ['Kh', '8d', '3c'],
+      min: 0,
+      max: 20,
+      step: 1,
+      unit: 'コンボ',
+      answer: 9,
+      tolerance: 1,
+      explain: 'KKは残りの K♠K♦ の1コンボ。AKは A 4枚 × K 2枚 = 8コンボ。合計9コンボです。Kを1枚持つだけで、相手の強い手が4割減ります。',
+    },
+    {
+      t: 'tip',
+      title: 'まとめ',
+      text: 'ブロッカーの計算は「残り枚数」を数えるだけです。Aを1枚持つと相手のAAは半分、AKは4分の3になります。この効果がブラフ選びの根拠になります。',
+    },
+  ],
+};
+
+export default lesson;

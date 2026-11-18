@@ -1,0 +1,90 @@
+{
+  "courses": [
+    {
+      "id": "board-reading",
+      "title": "ボードを読む練習",
+      "level": "中級",
+      "symbol": "盤",
+      "description": "代表的なフロップを分類し、どちらのレンジが有利かを見抜く練習をします。",
+      "lessons": [
+        "board-why-texture",
+        "board-range-nut",
+        "board-a-high",
+        "board-k-high",
+        "board-q-j-high",
+        "board-low-dry",
+        "board-low-connected",
+        "board-broadway",
+        "board-paired",
+        "board-monotone",
+        "board-two-tone",
+        "board-ip-oop",
+        "board-3bet-pots",
+        "board-turn-shift",
+        "board-sorting-30"
+      ]
+    }
+  ],
+  "lessons": {
+    "board-why-texture": {
+      "title": "ボードの質を見る理由",
+      "summary": "フロップの形で、誰のレンジが有利になるかが変わることを理解します。"
+    },
+    "board-range-nut": {
+      "title": "レンジアドバンテージとナッツアドバンテージ",
+      "summary": "2つの有利さの違いを区別し、ベットサイズとの関係を理解します。"
+    },
+    "board-a-high": {
+      "title": "A-highドライボード",
+      "summary": "A72、A83などのドライなAボードでレイザーが有利になる理由を整理します。"
+    },
+    "board-k-high": {
+      "title": "K-highのボード",
+      "summary": "K72、K94、K83など、Kが最高カードのボードの扱いを確認します。"
+    },
+    "board-q-j-high": {
+      "title": "Q-highとJ-highのボード",
+      "summary": "Q72、QJ5、J83などの中間的な高さのボードを見ます。"
+    },
+    "board-low-dry": {
+      "title": "ミドル〜ローのドライボード",
+      "summary": "T62、972、862など、低めでつながっていないボードを見ます。"
+    },
+    "board-low-connected": {
+      "title": "ローコネクテッドボード",
+      "summary": "765、987、543など、低くつながったボードの特徴を理解します。"
+    },
+    "board-broadway": {
+      "title": "ブロードウェイボード",
+      "summary": "KQJ、QJT、AKQなど高いカードが並ぶボードでのナッツアドバンテージを見ます。"
+    },
+    "board-paired": {
+      "title": "ペアボード",
+      "summary": "K55、Q99、A77、332など、ボードにペアがあるときの傾向を整理します。"
+    },
+    "board-monotone": {
+      "title": "モノトーンボード",
+      "summary": "K♠7♠2♠、9♠6♠3♠など、3枚が同じスートのボードを見ます。"
+    },
+    "board-two-tone": {
+      "title": "ツートーンボードとドロー",
+      "summary": "K♥9♥4♣、J♥8♥3♣、T♥9♥6♣など、ドローが現れるボードを分析します。"
+    },
+    "board-ip-oop": {
+      "title": "ポジションとボードの関係",
+      "summary": "IPとOOPの違いが、ボードごとの戦い方をどう変えるかを整理します。"
+    },
+    "board-3bet-pots": {
+      "title": "3betポットのボード",
+      "summary": "3betされたポットでは、どのボードがどちらに有利になるかを見ます。"
+    },
+    "board-turn-shift": {
+      "title": "ターンでボードが変わるとき",
+      "summary": "ターンのカードで有利不利がどう入れ替わるかを学びます。"
+    },
+    "board-sorting-30": {
+      "title": "30フロップの総整理",
+      "summary": "30種類の代表的なフロップを、有利不利の観点で分類して総復習します。"
+    }
+  }
+}

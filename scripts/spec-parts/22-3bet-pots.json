@@ -1,0 +1,39 @@
+{
+  "courses": [
+    {
+      "id": "3bet-pots",
+      "title": "3betポットの戦い方",
+      "level": "中級",
+      "symbol": "3",
+      "description": "SPRが低い3betポットで、c-bet・守り方・全額を入れる基準を学びます。",
+      "lessons": [
+        "3bp-spr-basics",
+        "3bp-commitment",
+        "3bp-cbet-ip",
+        "3bp-cbet-oop",
+        "3bp-defend-caller-ip",
+        "3bp-defend-oop",
+        "3bp-overpairs",
+        "3bp-top-pair",
+        "3bp-stack-off-thresholds",
+        "3bp-draws",
+        "3bp-turn-play",
+        "3bp-4bet-pots"
+      ]
+    }
+  ],
+  "lessons": {
+    "3bp-spr-basics": { "title": "SPRの基本", "summary": "ポットとスタックの比率で、3betポットの戦い方が変わる理由を学びます。" },
+    "3bp-commitment": { "title": "コミットの考え方", "summary": "ベットを重ねて引き返せなくなる流れと、サイズの目安を見ます。" },
+    "3bp-cbet-ip": { "title": "IP 3bettorのc-bet", "summary": "ポジションのある3bettorが小さく高頻度に打つ理由を学びます。" },
+    "3bp-cbet-oop": { "title": "OOP 3bettorのc-bet", "summary": "ポジションがない3bettorが手を選んで打つ考え方です。" },
+    "3bp-defend-caller-ip": { "title": "3betコーラーの守り（IP）", "summary": "インポジションで3betをコールした側のフロップ戦略です。" },
+    "3bp-defend-oop": { "title": "3betコーラーの守り（OOP）", "summary": "アウトオブポジションで3betをコールした側が損を抑える方法です。" },
+    "3bp-overpairs": { "title": "オーバーペアの扱い", "summary": "低SPRでオーバーペアがどこまで強いか、ボードごとに整理します。" },
+    "3bp-top-pair": { "title": "トップペアの判断", "summary": "キッカーとレンジで変わるトップペアの価値と、レイズへの対応です。" },
+    "3bp-stack-off-thresholds": { "title": "全額を入れる基準", "summary": "必要勝率と相手のレンジから、スタックを入れる手を決めます。" },
+    "3bp-draws": { "title": "3betポットのドロー", "summary": "インプライドオッズが小さい場面での、セミブラフ中心のドローの使い方です。" },
+    "3bp-turn-play": { "title": "3betポットのターン", "summary": "ターンのサイズがリバーのSPRを決めることを意識して打ちます。" },
+    "3bp-4bet-pots": { "title": "4betポットの基本", "summary": "SPR約2の4betポットで、ヒットしたら全額・外れたらフォールドの方針を学びます。" }
+  }
+}

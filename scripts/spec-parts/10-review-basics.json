@@ -1,0 +1,65 @@
+{
+  "courses": [
+    {
+      "id": "review-basics",
+      "title": "用語と基本の総復習",
+      "level": "初心者",
+      "symbol": "復",
+      "description": "役、アクション、ポジション、ポットオッズなど、基本を問題形式で総復習します。",
+      "lessons": [
+        "rb-hand-ranks",
+        "rb-actions",
+        "rb-positions",
+        "rb-blinds-pot",
+        "rb-streets",
+        "rb-pot-odds",
+        "rb-outs",
+        "rb-starting-hands",
+        "rb-terms",
+        "rb-final-test"
+      ]
+    }
+  ],
+  "lessons": {
+    "rb-hand-ranks": {
+      "title": "役の強さをおさらい",
+      "summary": "10種類の役の順位と、同じ役どうしの勝ち負けを確認します。"
+    },
+    "rb-actions": {
+      "title": "5つのアクションを使い分ける",
+      "summary": "フォールド、チェック、コール、ベット、レイズの意味と使える場面を復習します。"
+    },
+    "rb-positions": {
+      "title": "ポジションと席の名前",
+      "summary": "6人卓の6つのポジションと、後ろの席ほど有利な理由を確認します。"
+    },
+    "rb-blinds-pot": {
+      "title": "ブラインドとポットの数え方",
+      "summary": "SB・BB、ポットの大きさ、スタックの単位 bb を確認します。"
+    },
+    "rb-streets": {
+      "title": "ハンドの流れと4つのストリート",
+      "summary": "プリフロップからリバーまでの流れと、場のカードの出し方を復習します。"
+    },
+    "rb-pot-odds": {
+      "title": "ポットオッズの感覚をつかむ",
+      "summary": "コールに必要な勝率の考え方と、よく出る数字を身につけます。"
+    },
+    "rb-outs": {
+      "title": "アウツと勝率の早見",
+      "summary": "アウツを数えて、2と4の法則で勝率の目安を出します。"
+    },
+    "rb-starting-hands": {
+      "title": "スターティングハンドの強さ",
+      "summary": "ハンドの種類とコンボ数、強いハンドの見分け方を確認します。"
+    },
+    "rb-terms": {
+      "title": "よく出る用語集",
+      "summary": "レッスンや解説でよく目にする用語をまとめて確認します。"
+    },
+    "rb-final-test": {
+      "title": "総復習テスト",
+      "summary": "このコースの内容をまとめて確認する総合テストです。"
+    }
+  }
+}

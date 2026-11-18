@@ -1,0 +1,51 @@
+{
+  "name": "holdem-lab-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "seed:build": "node scripts/build-seed.mjs",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "catalog": "node scripts/build-catalog.mjs",
+    "cf:dev": "npm run build && wrangler pages dev --port 8788",
+    "db:migrate:local": "wrangler d1 migrations apply holdem-lab --local",
+    "db:migrate": "wrangler d1 migrations apply holdem-lab --remote",
+    "db:seed:local": "npm run seed:build && wrangler d1 execute holdem-lab --local --file seed/lessons.sql",
+    "db:seed": "npm run seed:build && wrangler d1 execute holdem-lab --remote --file seed/lessons.sql",
+    "deploy": "node scripts/deploy.mjs",
+    "setup": "node scripts/setup.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@ionic/react": "^9.0.11",
+    "@ionic/react-router": "^9.0.11",
+    "canvas-confetti": "^1.9.4",
+    "hono": "^4.13.18",
+    "ionicons": "^8.1.0",
+    "jose": "^6.2.17",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^6.30.6",
+    "react-router-dom": "^6.30.6",
+    "stripe": "^23.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261115.1",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vite-pwa/assets-generator": "^2.0.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.90.0",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.0",
+    "wrangler": "^4.162.0"
+  }
+}

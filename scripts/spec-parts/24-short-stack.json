@@ -1,0 +1,35 @@
+{
+  "courses": [
+    {
+      "id": "short-stack",
+      "title": "ショートスタック（40bb以下）",
+      "level": "中級",
+      "symbol": "S",
+      "description": "キャッシュゲームで40bb以下になったときのオープン、3betオールイン、オールインへのコール、フロップのコミットを学びます。",
+      "lessons": [
+        "ss-what-changes",
+        "ss-open-size",
+        "ss-3bet-shove",
+        "ss-calling-allin",
+        "ss-hand-values",
+        "ss-facing-3bet",
+        "ss-flop-commit",
+        "ss-low-spr-cbet",
+        "ss-vs-short",
+        "ss-review"
+      ]
+    }
+  ],
+  "lessons": {
+    "ss-what-changes": { "title": "40bbで何が変わるか", "summary": "SPRを100bbと比べ、浅いスタックで手の価値と打ち方が変わる理由を見ます。" },
+    "ss-open-size": { "title": "オープンサイズを小さくする", "summary": "2〜2.2bbのオープンが浅いスタックで得になる理由を計算で確かめます。" },
+    "ss-3bet-shove": { "title": "3betはオールインで", "summary": "30bb前後で3betオールインのEVを計算し、使う手を選びます。" },
+    "ss-calling-allin": { "title": "オールインにコールする計算", "summary": "必要勝率と相手のレンジへの勝率を比べて、コールとフォールドを決めます。" },
+    "ss-hand-values": { "title": "価値が上がる手・下がる手", "summary": "セット狙いが割に合わなくなり、高いカードの価値が上がる理由を見ます。" },
+    "ss-facing-3bet": { "title": "3betされたときの判断", "summary": "40bbでオープンして3betされたとき、相手の3betレンジを数えて判断します。" },
+    "ss-flop-commit": { "title": "フロップのコミット判断", "summary": "低SPRのフロップで、最後まで行くか降りるかを先に決める方法を学びます。" },
+    "ss-low-spr-cbet": { "title": "低SPRのCベットサイズ", "summary": "2回でスタックを入れる等比サイズと、守る側の覚悟を学びます。" },
+    "ss-vs-short": { "title": "ショートスタックと戦う", "summary": "深いスタックの側から、有効スタックとオールインへの答えを考えます。" },
+    "ss-review": { "title": "総合演習：40bbの1ハンド", "summary": "オープンからターンのオールインまで、1ハンドを通して判断を確認します。" }
+  }
+}

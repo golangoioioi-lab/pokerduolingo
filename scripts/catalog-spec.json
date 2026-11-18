@@ -1,0 +1,582 @@
+{
+ "courses": [
+  {
+   "id": "beginner",
+   "title": "はじめてのポーカー",
+   "level": "初心者",
+   "symbol": "♣",
+   "description": "ルール、アクション、役、ポジション。ここから始めましょう。",
+   "lessons": [
+    "what-is-poker",
+    "actions",
+    "blinds-and-button",
+    "betting-rounds",
+    "flow-and-hands",
+    "hand-ranking-details",
+    "best-five-cards",
+    "position",
+    "all-in-side-pots",
+    "first-hand",
+    "table-manners",
+    "beginner-mistakes",
+    "first-session"
+   ]
+  },
+  {
+   "id": "basic",
+   "title": "確率とプリフロップの基本",
+   "level": "初級",
+   "symbol": "♦",
+   "description": "コールに必要な勝率、ドローの確率、どのハンドで参加するか。",
+   "lessons": [
+    "pot-odds",
+    "outs",
+    "outs-practice",
+    "implied-odds",
+    "reverse-implied-odds",
+    "starting-hands",
+    "pocket-pairs",
+    "suited-connectors",
+    "ace-x-hands",
+    "broadway-hands",
+    "rfi",
+    "playing-in-position"
+   ]
+  },
+  {
+   "id": "math",
+   "title": "ポーカーの数学",
+   "level": "初級",
+   "symbol": "%",
+   "description": "期待値、コンボ、分散。判断を数字で確かめる力をつけます。",
+   "lessons": [
+    "ev-basics",
+    "ev-of-calls",
+    "ev-of-bluffs",
+    "combinatorics",
+    "preflop-probabilities",
+    "fold-equity",
+    "alpha-and-mdf-drill",
+    "decision-trees",
+    "variance",
+    "sample-size"
+   ]
+  },
+  {
+   "id": "intermediate",
+   "title": "実戦で勝つ中級戦略",
+   "level": "中級",
+   "symbol": "♥",
+   "description": "3bet・4bet、ブラインドの守り方、フロップとターンのベット判断。",
+   "lessons": [
+    "3bet",
+    "4bet",
+    "facing-3bet",
+    "squeeze",
+    "bb-defense",
+    "sb-play",
+    "multiway-pots",
+    "texture",
+    "paired-boards",
+    "monotone-boards",
+    "cbet",
+    "facing-cbet",
+    "check-raise",
+    "delayed-cbet",
+    "probe-bet",
+    "float",
+    "sizing",
+    "semi-bluff"
+   ]
+  },
+  {
+   "id": "advanced",
+   "title": "上級：読みと理論",
+   "level": "上級",
+   "symbol": "♠",
+   "description": "ターン・リバーの判断、ハンドリーディング、GTOとエクスプロイト。",
+   "lessons": [
+    "turn-barrel",
+    "river",
+    "river-overbet",
+    "polar-vs-condensed",
+    "range-construction",
+    "protection-bets",
+    "spr",
+    "deep-stacks",
+    "equity-realization",
+    "hand-reading",
+    "blockers-deep",
+    "bluff-catching",
+    "gto",
+    "mdf",
+    "exploit"
+   ]
+  },
+  {
+   "id": "hand-review",
+   "title": "ハンド解説",
+   "level": "中級",
+   "symbol": "▶",
+   "description": "実戦の1ハンドを、プリフロップからリバーまで一緒に振り返ります。",
+   "lessons": [
+    "hr-01",
+    "hr-02",
+    "hr-03",
+    "hr-04",
+    "hr-05",
+    "hr-06",
+    "hr-07",
+    "hr-08",
+    "hr-09",
+    "hr-10"
+   ]
+  },
+  {
+   "id": "tournament",
+   "title": "トーナメント",
+   "level": "中級",
+   "symbol": "♔",
+   "description": "スタックの深さ、プッシュ／フォールド、ICM、バブルとファイナルテーブル。",
+   "lessons": [
+    "mtt-basics",
+    "stack-depth-bb",
+    "push-fold",
+    "icm-basics",
+    "bubble-play",
+    "final-table",
+    "antes",
+    "late-stage-steals",
+    "satellites",
+    "reentry-strategy"
+   ]
+  },
+  {
+   "id": "mindset",
+   "title": "メンタルと資金管理",
+   "level": "全レベル",
+   "symbol": "◎",
+   "description": "運の波との付き合い方、資金管理、ティルト対策、上達の習慣。",
+   "lessons": [
+    "understanding-variance",
+    "bankroll-cash",
+    "bankroll-mtt",
+    "tilt-control",
+    "session-review",
+    "study-plan",
+    "game-selection",
+    "healthy-play"
+   ]
+  }
+ ],
+ "lessons": {
+  "what-is-poker": {
+   "title": "ポーカーってどんなゲーム？",
+   "minutes": 4,
+   "summary": "ゲームの目的と、勝ち方が2つあること。"
+  },
+  "actions": {
+   "title": "5つのアクション",
+   "minutes": 5,
+   "summary": "チェック・ベット・コール・レイズ・フォールドの使い分け。"
+  },
+  "flow-and-hands": {
+   "title": "ホールデムの流れと役の強さ",
+   "minutes": 5,
+   "summary": "1ハンドの進み方と、役の強さの順番を確認します。"
+  },
+  "position": {
+   "title": "ポジションがすべて",
+   "minutes": 6,
+   "summary": "後から行動できることがなぜ有利なのか。6人卓の各ポジションの特徴。"
+  },
+  "first-hand": {
+   "title": "1ハンドを通しで見てみよう",
+   "minutes": 6,
+   "summary": "配られてから決着まで、実際の流れを追う。"
+  },
+  "pot-odds": {
+   "title": "ポットオッズとエクイティ",
+   "minutes": 7,
+   "summary": "コールするのに何%の勝率が必要か。すべての判断の基礎となる計算。"
+  },
+  "outs": {
+   "title": "アウツと「2と4のルール」",
+   "minutes": 6,
+   "summary": "ドローが完成する確率を暗算で求める方法。"
+  },
+  "starting-hands": {
+   "title": "スターティングハンドとコンボ",
+   "minutes": 7,
+   "summary": "169種類のハンドの分類と、「コンボ数」で考える習慣。"
+  },
+  "rfi": {
+   "title": "オープンレイズ（RFI）の考え方",
+   "minutes": 8,
+   "summary": "自分より前が全員フォールドしたとき、どのハンドでレイズするか。"
+  },
+  "3bet": {
+   "title": "3betの理論：バリューとブラフ",
+   "minutes": 9,
+   "summary": "相手のオープンにリレイズする理由と、どのハンドを選ぶか。"
+  },
+  "bb-defense": {
+   "title": "BBディフェンス",
+   "minutes": 8,
+   "summary": "すでに1bb払っているBBは、相手のオープンに広くディフェンスする。"
+  },
+  "sb-play": {
+   "title": "SBの戦い方",
+   "minutes": 6,
+   "summary": "最も難しいポジション。「3betかフォールド」が基本になる理由。"
+  },
+  "texture": {
+   "title": "ボードテクスチャを読む",
+   "minutes": 8,
+   "summary": "フロップの性質を分類し、どちらのレンジに有利かを判断する。"
+  },
+  "cbet": {
+   "title": "Cベット戦略",
+   "minutes": 9,
+   "summary": "プリフロップでレイズした側がフロップでベットする「継続ベット」の基本。"
+  },
+  "facing-cbet": {
+   "title": "Cベットへの対応",
+   "minutes": 8,
+   "summary": "コールした側は、相手のCベットにどう守り、いつチェックレイズするか。"
+  },
+  "sizing": {
+   "title": "ベットサイズの考え方",
+   "minutes": 8,
+   "summary": "小さく打つべきとき、大きく打つべきとき。ポラライズとマージ。"
+  },
+  "semi-bluff": {
+   "title": "ドローとセミブラフ",
+   "minutes": 8,
+   "summary": "ドローは受け身でコールするだけでなく、ベットやレイズで勝ち方を2つにする。"
+  },
+  "turn-barrel": {
+   "title": "ターン：バレルするかどうか",
+   "minutes": 8,
+   "summary": "フロップでベットした後、ターンでも打ち続けるべきカードとやめるべきカード。"
+  },
+  "river": {
+   "title": "リバー：バリューベットとブラフキャッチ",
+   "minutes": 10,
+   "summary": "最後のストリート。どれくらい薄くバリューを取り、どの手でブラフし、どの手でコールするか。"
+  },
+  "spr": {
+   "title": "SPRとコミットメント",
+   "minutes": 7,
+   "summary": "スタックとポットの比率で、どこまで戦えるかを決める。"
+  },
+  "hand-reading": {
+   "title": "ハンドリーディングとコンボカウント",
+   "minutes": 10,
+   "summary": "相手のアクションからレンジを絞り、コンボ数で判断する。"
+  },
+  "gto": {
+   "title": "GTOとは何か",
+   "minutes": 7,
+   "summary": "「負けない戦略」としてのGTOと、混合戦略の意味。"
+  },
+  "mdf": {
+   "title": "MDFとブラフの頻度",
+   "minutes": 9,
+   "summary": "どれくらいの頻度でディフェンスし、どれくらいブラフすべきか。"
+  },
+  "exploit": {
+   "title": "エクスプロイト：相手に合わせる",
+   "minutes": 8,
+   "summary": "GTOを基準に、相手のミスを最大限に突く方法。"
+  },
+  "blinds-and-button": {
+   "title": "ボタンとブラインド",
+   "summary": "ボタンの動き方と、ブラインドが必要な理由。"
+  },
+  "betting-rounds": {
+   "title": "ベッティングラウンドの進み方",
+   "summary": "ラウンドが終わる条件と最小レイズ額。"
+  },
+  "hand-ranking-details": {
+   "title": "役の細かいルール",
+   "summary": "同じ役どうしの比べ方とスプリット。"
+  },
+  "best-five-cards": {
+   "title": "7枚から5枚を選ぶ",
+   "summary": "ボードを使う・使わない、読み違えやすい例。"
+  },
+  "all-in-side-pots": {
+   "title": "オールインとサイドポット",
+   "summary": "スタックが違う3人の例で、誰が何を取れるか。"
+  },
+  "table-manners": {
+   "title": "マナーとルール",
+   "summary": "ライブとオンラインで気をつけること。"
+  },
+  "beginner-mistakes": {
+   "title": "初心者がやりがちなミス",
+   "summary": "よくある6つのミスと、代わりにすること。"
+  },
+  "first-session": {
+   "title": "はじめて実戦で遊ぶ前に",
+   "summary": "無料プレイから始め、無理のない範囲で。"
+  },
+  "implied-odds": {
+   "title": "インプライドオッズ",
+   "summary": "あとで勝てる額まで含めてコールを判断する。"
+  },
+  "reverse-implied-odds": {
+   "title": "逆インプライドオッズ",
+   "summary": "当たっても負ける手が大きく損をする理由。"
+  },
+  "outs-practice": {
+   "title": "アウツを数える練習",
+   "summary": "重なるアウツと、割り引くべきアウツ。"
+  },
+  "pocket-pairs": {
+   "title": "ポケットペアの扱い",
+   "summary": "小・中・大のペアと、セットを狙う条件。"
+  },
+  "suited-connectors": {
+   "title": "スーテッドコネクター",
+   "summary": "どんなフロップで勝ち、何が必要か。"
+  },
+  "ace-x-hands": {
+   "title": "Ax ハンドの扱い",
+   "summary": "強いAと、ドミネートされやすいAの違い。"
+  },
+  "broadway-hands": {
+   "title": "ブロードウェイハンド",
+   "summary": "KQ・KJ・QJ などの強さと危うさ。"
+  },
+  "playing-in-position": {
+   "title": "ポジションを活かす",
+   "summary": "後から動ける利点を具体的なハンドで。"
+  },
+  "river-overbet": {
+   "title": "リバーのオーバーベット",
+   "summary": "ポットより大きく打てる条件とブラフの割合。"
+  },
+  "polar-vs-condensed": {
+   "title": "ポラライズとコンデンス",
+   "summary": "二極化したレンジと、中間に寄ったレンジ。"
+  },
+  "blockers-deep": {
+   "title": "ブロッカーを使いこなす",
+   "summary": "持っているカードでコンボがどう変わるか。"
+  },
+  "bluff-catching": {
+   "title": "ブラフキャッチの選び方",
+   "summary": "同じ強さなら、どの手でコールするか。"
+  },
+  "range-construction": {
+   "title": "レンジの組み立て",
+   "summary": "サイズごとのバリューとブラフの比率。"
+  },
+  "protection-bets": {
+   "title": "プロテクションとデナイ",
+   "summary": "中くらいの手でベットする意味。"
+  },
+  "equity-realization": {
+   "title": "エクイティの実現率",
+   "summary": "勝率どおりに稼げない手と、その理由。"
+  },
+  "deep-stacks": {
+   "title": "ディープスタック",
+   "summary": "200bb以上で価値が上がる手、下がる手。"
+  },
+  "hr-01": {
+   "title": "トップペアのバリュー設計",
+   "summary": "BTN対BBでKQのトップペアを3ストリートで打つ。"
+  },
+  "hr-02": {
+   "title": "外れたAKの引き際",
+   "summary": "乾いたボードで小さくCベットし、悪いターンで止まる。"
+  },
+  "hr-03": {
+   "title": "ナッツドローでチェックレイズ",
+   "summary": "BBでナッツフラッシュドローをセミブラフで打ち切る。"
+  },
+  "hr-04": {
+   "title": "3betポットのQQ",
+   "summary": "SPRが小さい3betポットでオーバーペアを判断する。"
+  },
+  "hr-05": {
+   "title": "リバーのブラフキャッチ",
+   "summary": "外れたドローをコンボで数え、コールを決める。"
+  },
+  "hr-06": {
+   "title": "セットは速く打つ",
+   "summary": "濡れたボードのセットで大きなポットを作る。"
+  },
+  "hr-07": {
+   "title": "マルチウェイの弱いトップペア",
+   "summary": "3人でのK9をポットを小さく保って扱う。"
+  },
+  "hr-08": {
+   "title": "SBから3betしたAK",
+   "summary": "OOPでもSPRを使って計画的にスタックを入れる。"
+  },
+  "hr-09": {
+   "title": "リバーの薄いバリュー",
+   "summary": "受け身な相手に、セカンドペアで小さく打つ。"
+  },
+  "hr-10": {
+   "title": "ターンのダブルバレル",
+   "summary": "勝率が増えるターンで2発目のブラフを打つ。"
+  },
+  "understanding-variance": {
+   "title": "勝ち負けの波を理解する",
+   "summary": "短期の結果ではなく、判断の質で振り返る。"
+  },
+  "bankroll-cash": {
+   "title": "資金管理（キャッシュ）",
+   "summary": "バイイン数の目安と、レートを上げ下げする基準。"
+  },
+  "bankroll-mtt": {
+   "title": "資金管理（トーナメント）",
+   "summary": "ぶれの大きいトーナメントに必要な資金の目安。"
+  },
+  "tilt-control": {
+   "title": "ティルトとの付き合い方",
+   "summary": "兆候に気づき、リセットする手順と損失上限。"
+  },
+  "session-review": {
+   "title": "セッションの振り返り方",
+   "summary": "判断ごとに見直して練習につなげる。"
+  },
+  "study-plan": {
+   "title": "上達のための学習計画",
+   "summary": "理論・練習・振り返りの週間計画。"
+  },
+  "game-selection": {
+   "title": "ゲーム選び",
+   "summary": "実力差に注目して卓とレートを選ぶ。"
+  },
+  "healthy-play": {
+   "title": "健全に楽しむために",
+   "summary": "時間とお金の上限、問題のサインと相談先。"
+  },
+  "mtt-basics": {
+   "title": "トーナメントの基本",
+   "summary": "ブラインド、賞金分配、キャッシュとの違い。"
+  },
+  "stack-depth-bb": {
+   "title": "スタックをbbで考える",
+   "summary": "bb数のゾーンごとに戦い方が変わる。"
+  },
+  "push-fold": {
+   "title": "プッシュ／フォールド",
+   "summary": "10bb前後でオールインかフォールドに絞る理由。"
+  },
+  "icm-basics": {
+   "title": "ICMの基本",
+   "summary": "3人の例でチップと賞金価値のずれを計算。"
+  },
+  "bubble-play": {
+   "title": "バブルの戦い方",
+   "summary": "入賞直前の圧力とスタック別の立ち回り。"
+  },
+  "final-table": {
+   "title": "ファイナルテーブル",
+   "summary": "ペイジャンプとスタックの関係で判断を変える。"
+  },
+  "antes": {
+   "title": "アンティの影響",
+   "summary": "ポットが増えるとオープンも守りも広がる。"
+  },
+  "reentry-strategy": {
+   "title": "リエントリーとレイトレジ",
+   "summary": "やり直せる大会での序盤の戦い方。"
+  },
+  "satellites": {
+   "title": "サテライト",
+   "summary": "全シート同価値の大会で強い手を降りる理由。"
+  },
+  "late-stage-steals": {
+   "title": "終盤のスチールとリスチール",
+   "summary": "15〜25bbでの3betオールインの損益。"
+  },
+  "ev-basics": {
+   "title": "期待値（EV）とは",
+   "summary": "結果ではなく期待値で判断する理由。"
+  },
+  "ev-of-calls": {
+   "title": "コールの期待値",
+   "summary": "エクイティとポットからコールのEVを出す。"
+  },
+  "ev-of-bluffs": {
+   "title": "ブラフの期待値",
+   "summary": "ブラフのEVと損益分岐のフォールド率。"
+  },
+  "combinatorics": {
+   "title": "コンボの数え方",
+   "summary": "バリューとブラフのコンボを比べる。"
+  },
+  "preflop-probabilities": {
+   "title": "プリフロップの確率",
+   "summary": "ペアやAKが配られる確率、後ろにAAがいる確率。"
+  },
+  "fold-equity": {
+   "title": "フォールドエクイティの計算",
+   "summary": "降りる確率と勝率を合わせたEV。"
+  },
+  "variance": {
+   "title": "分散と運",
+   "summary": "標準偏差で収支の浮き沈みを理解する。"
+  },
+  "sample-size": {
+   "title": "サンプル数と勝率",
+   "summary": "何ハンドあれば勝率を信頼できるか。"
+  },
+  "alpha-and-mdf-drill": {
+   "title": "αとMDFの計算ドリル",
+   "summary": "ベットサイズ別の必要勝率を覚える。"
+  },
+  "decision-trees": {
+   "title": "判断を分岐で考える",
+   "summary": "選択肢を書き出してEVを比べる。"
+  },
+  "4bet": {
+   "title": "4betの考え方",
+   "summary": "バリューとブラフの4bet、サイズとブロッカー。"
+  },
+  "squeeze": {
+   "title": "スクイーズ",
+   "summary": "オープンとコールの後の3betが効く理由。"
+  },
+  "facing-3bet": {
+   "title": "3betされたときの対応",
+   "summary": "ポジション別にコール・4bet・降りを判断。"
+  },
+  "multiway-pots": {
+   "title": "マルチウェイポット",
+   "summary": "3人以上ではバリューを厳しく、ブラフを減らす。"
+  },
+  "check-raise": {
+   "title": "チェックレイズ",
+   "summary": "バリューとドローで組む、ボード選びとサイズ。"
+  },
+  "delayed-cbet": {
+   "title": "ディレイドCベット",
+   "summary": "フロップを見送り、ターンでベットする場面。"
+  },
+  "probe-bet": {
+   "title": "プローブベット",
+   "summary": "相手が見送った後、OOPからターンで攻める。"
+  },
+  "float": {
+   "title": "フロート",
+   "summary": "IPでコールし、ターン以降にポットを奪う。"
+  },
+  "paired-boards": {
+   "title": "ペアボードの戦い方",
+   "summary": "コンボ数と、小さく広いCベットの理由。"
+  },
+  "monotone-boards": {
+   "title": "モノトーンボード",
+   "summary": "同スート3枚でのサイズとブロッカー。"
+  }
+ }
+}

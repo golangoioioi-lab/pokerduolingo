@@ -1,0 +1,45 @@
+{
+  "courses": [
+    {
+      "id": "turn-river",
+      "title": "ターン・リバー集中講座",
+      "level": "上級",
+      "symbol": "R",
+      "description": "ターンカードの読み方からリバーのサイズ、ブラフキャッチまで、後半ストリートの判断を数字で固めます。",
+      "lessons": [
+        "tr-turn-card-classes",
+        "tr-overcard-turns",
+        "tr-completer-turns",
+        "tr-pairing-turns",
+        "tr-double-barrel",
+        "tr-delayed-cbet-turn",
+        "tr-turn-check-raise",
+        "tr-turn-overbet",
+        "tr-triple-barrel",
+        "tr-thin-value",
+        "tr-river-sizing",
+        "tr-block-bet",
+        "tr-mdf-bluffcatch",
+        "tr-blocker-bluffcatch",
+        "tr-review"
+      ]
+    }
+  ],
+  "lessons": {
+    "tr-turn-card-classes": { "title": "ターンカードの4分類", "summary": "オーバーカード・ドロー完成・ブリック・ペアの4つに分け、どちらのレンジを助けたかを考えます。" },
+    "tr-overcard-turns": { "title": "オーバーカードはだれの味方か", "summary": "AやKのターンがレイザーに有利になる理由をコンボで確かめ、バレルとディフェンスを考えます。" },
+    "tr-completer-turns": { "title": "ドローが完成するターン", "summary": "フラッシュやストレートが完成したターンで、ベットした側とコールした側がどう変わるかを学びます。" },
+    "tr-pairing-turns": { "title": "ボードがペアになるターン", "summary": "トリップスのコンボを数え、ペアのターンで小さく広く打てる理由を確かめます。" },
+    "tr-double-barrel": { "title": "ダブルバレルの手の選び方", "summary": "エクイティ・ブロッカー・ショーダウンバリューの基準で、ターンで打ち続ける手を選びます。" },
+    "tr-delayed-cbet-turn": { "title": "ディレイドCベットの実戦", "summary": "フロップをチェックで返したあと、どのターンでどのサイズを使うかを具体的に決めます。" },
+    "tr-turn-check-raise": { "title": "ターンのチェックレイズ", "summary": "リバーのオールインまで見越したチェックレイズのレンジと、受けた側の計算を学びます。" },
+    "tr-turn-overbet": { "title": "ターンのオーバーベット", "summary": "相手のレンジがキャップされたターンで、ポットより大きく打つ条件と必要なフォールド率を学びます。" },
+    "tr-triple-barrel": { "title": "トリプルバレル：リバーのブラフ選び", "summary": "サイズからブラフの量を決め、ブロッカーでブラフにする手札を選びます。" },
+    "tr-thin-value": { "title": "リバーの薄いバリューベット", "summary": "コールされたときに過半数に勝つかで判断し、小さいサイズで価値を取ります。" },
+    "tr-river-sizing": { "title": "リバーのベットサイズを選ぶ", "summary": "レンジの形と相手のレンジから、小さいサイズと大きいサイズを使い分けます。" },
+    "tr-block-bet": { "title": "OOPのブロックベット", "summary": "中くらいの手で先に小さく打つ理由と、チェックとの使い分けを学びます。" },
+    "tr-mdf-bluffcatch": { "title": "MDFでブラフキャッチの範囲を決める", "summary": "MDFでレンジに線を引き、相手のブラフの量に合わせて線を動かします。" },
+    "tr-blocker-bluffcatch": { "title": "ブロッカーでコールする手を選ぶ", "summary": "同じ強さのブラフキャッチャーから、相手のレンジを都合よく変える手札を選びます。" },
+    "tr-review": { "title": "総合演習：ターンからリバーまで", "summary": "1つのハンドを通して、カードの分類・サイズ・MDF・ブロッカーを確認します。" }
+  }
+}

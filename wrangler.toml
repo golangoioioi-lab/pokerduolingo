@@ -1,0 +1,17 @@
+# Cloudflare Pages project. Static files come from dist/, the API from functions/.
+name = "holdem-lab"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+[vars]
+# Public values. Secrets (Stripe keys) are set with `wrangler pages secret put`.
+GOOGLE_CLIENT_ID = "766152229898-to2vfabqe26fslugtp0jbbocv8hvnr5d.apps.googleusercontent.com"
+APP_ORIGIN = "https://holdem-lab-6a4.pages.dev"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "holdem-lab"
+# Filled in after `wrangler d1 create holdem-lab` (see docs/バックエンド構築手順.md).
+database_id = "46b5e287-932b-4651-bf1e-985b01b4a5e1"
+migrations_dir = "migrations"

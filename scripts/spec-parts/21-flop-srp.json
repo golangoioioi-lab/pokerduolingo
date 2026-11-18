@@ -1,0 +1,45 @@
+{
+  "courses": [
+    {
+      "id": "flop-srp",
+      "title": "フロップの打ち方（SRP）",
+      "level": "中級",
+      "symbol": "F",
+      "description": "シングルレイズドポットのフロップ戦略を、c-bet・チェックバック・守り方・チェックレイズまで通して学びます。",
+      "lessons": [
+        "srp-ip-cbet-basics",
+        "srp-oop-cbet-basics",
+        "srp-cbet-sizing",
+        "srp-range-bet",
+        "srp-polar-bet",
+        "srp-check-back-ip",
+        "srp-ak-high-boards",
+        "srp-low-connected-boards",
+        "srp-paired-boards-cbet",
+        "srp-facing-cbet-call",
+        "srp-float-ip",
+        "srp-raise-vs-cbet",
+        "srp-check-raise-oop",
+        "srp-bb-vs-btn-flop",
+        "srp-turn-after-flop-cbet"
+      ]
+    }
+  ],
+  "lessons": {
+    "srp-ip-cbet-basics": { "title": "IPのc-betの基本", "summary": "インポジションでのc-betが高頻度・小サイズになる理由を学びます。" },
+    "srp-oop-cbet-basics": { "title": "OOPのc-betの基本", "summary": "ポジションがないときにc-betを減らし、手を選ぶ考え方を学びます。" },
+    "srp-cbet-sizing": { "title": "c-betのサイズ選び", "summary": "小さいサイズと大きいサイズを、必要勝率とボードで使い分けます。" },
+    "srp-range-bet": { "title": "レンジベット", "summary": "ほぼ全部の手で小さく打つレンジベットが成立する条件を見ます。" },
+    "srp-polar-bet": { "title": "ポラライズドベット", "summary": "強い手とブラフだけで大きく打つ戦略と、その比率を学びます。" },
+    "srp-check-back-ip": { "title": "IPのチェックバック", "summary": "チェックバックする手と理由、ターンへのつなげ方を整理します。" },
+    "srp-ak-high-boards": { "title": "A・Kハイボードのc-bet", "summary": "AハイやKハイのドライなボードでの打ち方と、BBの守り方です。" },
+    "srp-low-connected-boards": { "title": "低くつながったボード", "summary": "7♥6♥5♣のようなボードでc-bet頻度を下げる理由と対策です。" },
+    "srp-paired-boards-cbet": { "title": "ペアボードのc-bet", "summary": "ペアボードで小さく高頻度に打てる理由とターンの進め方です。" },
+    "srp-facing-cbet-call": { "title": "c-betを受けたときの守り方", "summary": "必要勝率とMDFを使って、コールとフォールドを判断します。" },
+    "srp-float-ip": { "title": "フロートの基本", "summary": "インポジションで弱い手をコールし、ターンで取りに行く戦略です。" },
+    "srp-raise-vs-cbet": { "title": "c-betへのレイズ", "summary": "バリューとセミブラフでレイズする手と、相手側の必要勝率を学びます。" },
+    "srp-check-raise-oop": { "title": "OOPのチェックレイズ", "summary": "チェックレイズの目的、サイズ、手の選び方を整理します。" },
+    "srp-bb-vs-btn-flop": { "title": "BB対BTNのフロップ", "summary": "最も多い対戦で、BBがどう守りどうレイズするかをまとめます。" },
+    "srp-turn-after-flop-cbet": { "title": "c-bet後のターン", "summary": "フロップのc-betがコールされた後、ターンでどう続けるかを学びます。" }
+  }
+}

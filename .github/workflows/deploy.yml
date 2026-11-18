@@ -1,0 +1,46 @@
+# Push to main → test → update database → build → publish to Cloudflare Pages.
+# One-time setup (GitHub repo → Settings → Secrets and variables → Actions):
+#   Secrets:   CLOUDFLARE_API_TOKEN  (Cloudflare → My Profile → API Tokens → "Edit Cloudflare Workers" template,
+#                                     plus permission "D1: Edit")
+#              CLOUDFLARE_ACCOUNT_ID (Cloudflare dashboard → right sidebar "Account ID")
+#   Variables: VITE_GOOGLE_CLIENT_ID (public). Optional: VITE_PAID_PLANS=true to turn paid plans on,
+#              VITE_PRICE_MONTHLY_JPY, VITE_PRICE_YEARLY_JPY.
+# Server secrets (Stripe keys) stay in Cloudflare; `npm run setup` puts them there.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Write public build settings
+        run: |
+          cat > .env.production.local <<EOF
+          VITE_BACKEND=cloudflare
+          VITE_BUNDLE_PRO_CONTENT=false
+          VITE_PAID_PLANS=${{ vars.VITE_PAID_PLANS }}
+          VITE_GOOGLE_CLIENT_ID=${{ vars.VITE_GOOGLE_CLIENT_ID }}
+          VITE_PRICE_MONTHLY_JPY=${{ vars.VITE_PRICE_MONTHLY_JPY }}
+          VITE_PRICE_YEARLY_JPY=${{ vars.VITE_PRICE_YEARLY_JPY }}
+          EOF
+      - name: Test, migrate, build, publish
+        run: npm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

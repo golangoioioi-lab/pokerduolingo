@@ -1,0 +1,75 @@
+{
+  "courses": [
+    {
+      "id": "position-play",
+      "title": "ポジション別の実戦",
+      "level": "初級",
+      "symbol": "席",
+      "description": "6つの席ごとにオープン、コール、3betの考え方を学び、スクイーズやスチールなどの場面を整理します。",
+      "lessons": [
+        "pos-utg",
+        "pos-hj",
+        "pos-co",
+        "pos-btn",
+        "pos-sb",
+        "pos-bb",
+        "pos-squeeze",
+        "pos-cold-call",
+        "pos-facing-steal",
+        "pos-multiway",
+        "pos-steal-blinds",
+        "pos-review"
+      ]
+    }
+  ],
+  "lessons": {
+    "pos-utg": {
+      "title": "UTG：最初に動く席",
+      "summary": "後ろに5人いるUTGでは、レンジを絞って強い手だけでオープンします。"
+    },
+    "pos-hj": {
+      "title": "HJ：少しだけ広げる",
+      "summary": "ハイジャックはUTGより少し広く開けますが、COとBTNが控えています。"
+    },
+    "pos-co": {
+      "title": "CO：ボタンの一つ前",
+      "summary": "COは後ろが3人だけ。レンジを広げ、BTNの3betには備えます。"
+    },
+    "pos-btn": {
+      "title": "BTN：最も有利な席",
+      "summary": "ボタンは最後に動けるので、最も広くオープンし、ポジションの価値を使い切ります。"
+    },
+    "pos-sb": {
+      "title": "SB：位置のない難しい席",
+      "summary": "SBはポストフロップで常に先に動くため、レイズかフォールドを軸に組み立てます。"
+    },
+    "pos-bb": {
+      "title": "BB：安く守れる席",
+      "summary": "BBは既に1bbを払っているので、安いコール額を使って広く守ります。"
+    },
+    "pos-squeeze": {
+      "title": "スクイーズ：デッドマネーを狙う",
+      "summary": "オープンとコールの後ろから大きく3betして、2人分のお金を取りに行きます。"
+    },
+    "pos-cold-call": {
+      "title": "コールドコール：誰かのオープンに付いていく",
+      "summary": "まだお金を出していない状態でオープンにコールする場面を、位置別に整理します。"
+    },
+    "pos-facing-steal": {
+      "title": "スチールに直面したとき",
+      "summary": "BTNやCOの広いオープンに対して、ブラインドから3bet・コール・フォールドを使い分けます。"
+    },
+    "pos-multiway": {
+      "title": "マルチウェイポットの基本",
+      "summary": "3人以上でフロップを見るときは、強い手を重視し、ブラフを減らします。"
+    },
+    "pos-steal-blinds": {
+      "title": "ブラインドスチールの考え方",
+      "summary": "後ろの席から広くオープンして、ブラインドの1.5bbを取りに行く理由と損益分岐を学びます。"
+    },
+    "pos-review": {
+      "title": "ポジション別プレイの総復習",
+      "summary": "6つの席の考え方と、スクイーズ、コールドコール、スチールのまとめです。"
+    }
+  }
+}

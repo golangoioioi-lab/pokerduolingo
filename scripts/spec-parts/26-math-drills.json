@@ -1,0 +1,55 @@
+{
+  "courses": [
+    {
+      "id": "math-drills",
+      "title": "数学ドリル",
+      "level": "全レベル",
+      "symbol": "Σ",
+      "description": "ポットオッズからEV・SPRまで、手を動かして計算を身につける練習問題集です。",
+      "lessons": [
+        "drill-pot-odds-basic",
+        "drill-pot-odds-ratio",
+        "drill-pot-odds-sizing",
+        "drill-pot-odds-multiway",
+        "drill-preflop-odds",
+        "drill-outs-counting",
+        "drill-rule-2-4",
+        "drill-dirty-outs",
+        "drill-implied-odds",
+        "drill-combos-basic",
+        "drill-combos-blockers",
+        "drill-value-bluff-combos",
+        "drill-mdf",
+        "drill-bluff-ratio",
+        "drill-alpha",
+        "drill-ev-calls",
+        "drill-ev-bluffs",
+        "drill-ev-semibluffs",
+        "drill-spr",
+        "drill-mixed-review"
+      ]
+    }
+  ],
+  "lessons": {
+    "drill-pot-odds-basic": { "title": "ポットオッズ計算①　基本", "summary": "ポットとコール額から必要勝率を出す練習。" },
+    "drill-pot-odds-ratio": { "title": "ポットオッズ計算②　オッズ比", "summary": "「3対1」と「25%」を行き来する練習。" },
+    "drill-pot-odds-sizing": { "title": "ポットオッズ計算③　サイズ別", "summary": "ベットサイズごとの必要勝率を覚える。" },
+    "drill-pot-odds-multiway": { "title": "ポットオッズ計算④　レイズと複数人", "summary": "レイズされたときや多人数ポットでの必要勝率。" },
+    "drill-preflop-odds": { "title": "プリフロップのポットオッズ", "summary": "BBディフェンス、3bet、オールインへのコールの値段。" },
+    "drill-outs-counting": { "title": "アウツを数えるドリル", "summary": "ドローの組み合わせと重複を正しく数える。" },
+    "drill-rule-2-4": { "title": "2と4のルールのドリル", "summary": "アウツから完成確率を暗算し、コールを判断する。" },
+    "drill-dirty-outs": { "title": "割り引くアウツのドリル", "summary": "当たっても勝てないカードを除いて数える。" },
+    "drill-implied-odds": { "title": "インプライドオッズのドリル", "summary": "あと何bb勝てればコールが割に合うかを計算する。" },
+    "drill-combos-basic": { "title": "コンボ計算①　ボードで減る数", "summary": "ペア6・スーテッド4・オフスート12から数える。" },
+    "drill-combos-blockers": { "title": "コンボ計算②　ブロッカー", "summary": "自分の手札で相手のコンボがいくつ減るか。" },
+    "drill-value-bluff-combos": { "title": "コンボ計算③　バリューとブラフ", "summary": "コンボ比からブラフキャッチの勝率を出す。" },
+    "drill-mdf": { "title": "MDFのドリル", "summary": "ベットに対して最低どれだけ守るかを計算する。" },
+    "drill-bluff-ratio": { "title": "ブラフ頻度のドリル", "summary": "サイズごとのバリューとブラフの比率を求める。" },
+    "drill-alpha": { "title": "α（必要フォールド率）のドリル", "summary": "ブラフが成功すべき割合をサイズ別に計算する。" },
+    "drill-ev-calls": { "title": "コールのEVドリル", "summary": "勝率とポットからコールの期待値を出す。" },
+    "drill-ev-bluffs": { "title": "ブラフのEVドリル", "summary": "フォールド率とサイズからブラフの期待値を出す。" },
+    "drill-ev-semibluffs": { "title": "セミブラフのEVドリル", "summary": "フォールドエクイティと勝率を合わせて計算する。" },
+    "drill-spr": { "title": "SPRのドリル", "summary": "ポットの種類ごとのSPRと、その後の展開を計算する。" },
+    "drill-mixed-review": { "title": "総合ドリル", "summary": "オッズ・アウツ・コンボ・MDF・EVをまとめて復習。" }
+  }
+}

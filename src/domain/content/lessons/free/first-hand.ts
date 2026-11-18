@@ -1,0 +1,88 @@
+import type { LessonBody } from '../../types';
+
+const lesson: LessonBody = {
+  id: 'first-hand',
+  blocks: [
+    { t: 'p', text: '実際の1ハンドを最初から最後まで追ってみます。あなたは BTN で、手札は A♥ J♥。全員 100bb 持っています。' },
+    { t: 'cards', hands: [{ label: 'あなた（BTN）', cards: ['Ah', 'Jh'] }] },
+    { t: 'h', text: 'プリフロップ' },
+    { t: 'p', text: 'UTG・HJ・CO がフォールド。あなたは 2.5bb にレイズします。SB はフォールド、BB がコール。' },
+    {
+      t: 'estimate',
+      q: 'フロップが開く前のポットは何 bb？（SB は 0.5bb を出して降りた）',
+      hand: ['Ah', 'Jh'],
+      min: 0,
+      max: 10,
+      step: 0.5,
+      unit: 'bb',
+      answer: 5.5,
+      tolerance: 1,
+      explain: 'あなたの 2.5bb、BB の 2.5bb、SB の 0.5bb で合計 5.5bb です。',
+    },
+    { t: 'h', text: 'フロップ' },
+    { t: 'p', text: 'ボードは J♣ 7♥ 3♠。J のペアで、場の一番高いカードとペアなので「トップペア」、残りの A が「キッカー」です。BB がチェックし、あなたが 2bb（ポットの約3分の1）をベット、BB がコール。ポットは 9.5bb です。' },
+    {
+      t: 'timeline',
+      steps: [
+        { street: 'プリフロップ', pot: 5.5, actions: ['BTN（あなた）が 2.5bb にレイズ', 'BB がコール、他はフォールド'] },
+        { street: 'フロップ', board: ['Jc', '7h', '3s'], pot: 9.5, actions: ['BB チェック', 'あなたが 2bb ベット、BB コール'] },
+        { street: 'ターン', board: ['2h'], pot: 21.5, actions: ['BB チェック', 'あなたが 6bb ベット、BB コール'] },
+        { street: 'リバー', board: ['Kd'], actions: ['BB チェック', 'あなたもチェック'] },
+        { street: 'ショーダウン', actions: ['A♥J♥ と T♠J♦ を比べる'] },
+      ],
+      caption: 'ポットは各ストリート終了時の額です。',
+    },
+    { t: 'h', text: 'ターン' },
+    { t: 'p', text: '2♥ が落ち、ハートが2枚になりました。BB がチェック、あなたが 6bb をベットして BB がコール。ポットは 21.5bb です。' },
+    {
+      t: 'pot',
+      steps: [
+        { label: 'プリフロップ後', pot: 5.5, stack: 97.5 },
+        { label: 'フロップ後', pot: 9.5, stack: 95.5 },
+        { label: 'ターン後', pot: 21.5, stack: 89.5 },
+      ],
+      caption: 'ベットのたびにポットが増え、スタックが減ります（bb）。',
+    },
+    { t: 'h', text: 'リバー' },
+    { t: 'p', text: 'K♦ が落ち、KJ や KQ などに負けている可能性が出てきました。BB がチェックし、あなたもチェックしてショーダウンへ進みます。' },
+    {
+      t: 'quiz',
+      q: 'リバーで K が落ちた。あなたの A♥J♥ に勝つ相手の手札はどれ？',
+      hand: ['Ah', 'Jh'],
+      board: ['Jc', '7h', '3s', '2h', 'Kd'],
+      options: ['K♠ Q♦', 'T♠ J♦', '9♥ 8♥'],
+      optionCards: [['Ks', 'Qd'], ['Ts', 'Jd'], ['9h', '8h']],
+      answer: 0,
+      explain: 'K♠Q♦ は K のペアになり、あなたの J のペアより強くなります。T♠J♦ は同じ J のペアでキッカーが T なので A のあなたが勝ち、9♥8♥ は役なしです。',
+    },
+    { t: 'h', text: 'ショーダウン' },
+    {
+      t: 'cards',
+      hands: [{ label: 'あなた', cards: ['Ah', 'Jh'] }, { label: 'BB', cards: ['Ts', 'Jd'] }],
+      board: ['Jc', '7h', '3s', '2h', 'Kd'],
+      caption: 'どちらも J のワンペア。キッカーの A が T より強いので、あなたの勝ち。21.5bb を獲得です。',
+    },
+    {
+      t: 'equity',
+      players: [{ label: 'A♥J♥', cards: ['Ah', 'Jh'], pct: 87 }, { label: 'T♠J♦', cards: ['Ts', 'Jd'], pct: 13 }],
+      board: ['Jc', '7h', '3s'],
+      caption: 'フロップ時点の勝率（目安）。同じ J のペアでも、キッカーの差で A♥J♥ が大きくリードしています。',
+    },
+    {
+      t: 'estimate',
+      q: 'フロップ後のポットは 9.5bb。ターンで 6bb ベット、BB がコールすると？',
+      hand: ['Ah', 'Jh'],
+      board: ['Jc', '7h', '3s', '2h'],
+      min: 0,
+      max: 40,
+      step: 0.5,
+      unit: 'bb',
+      answer: 21.5,
+      tolerance: 3,
+      explain: 'ベットとコールで 6 + 6 = 12bb が加わるので、9.5 + 12 = 21.5bb です。',
+    },
+    { t: 'tip', text: 'なぜ 2.5bb なのか、なぜフロップは小さく打ったのか、なぜリバーはチェックしたのか。この先のコースで1つずつ理由を学びます。' },
+  ],
+};
+
+export default lesson;

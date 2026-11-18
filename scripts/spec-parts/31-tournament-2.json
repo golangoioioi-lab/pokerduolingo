@@ -1,0 +1,45 @@
+{
+  "courses": [
+    {
+      "id": "tournament-2",
+      "title": "トーナメント 2",
+      "level": "上級",
+      "symbol": "♛",
+      "description": "ICMの計算と応用、アンティありのプッシュ／フォールド、バブルとファイナルテーブル、ヘッズアップ、PKO。",
+      "lessons": [
+        "mtt2-icm-calc",
+        "mtt2-risk-premium",
+        "mtt2-call-vs-shove",
+        "mtt2-ante-pushfold",
+        "mtt2-reshove",
+        "mtt2-bubble-big",
+        "mtt2-bubble-medium",
+        "mtt2-bubble-short",
+        "mtt2-ft-payjumps",
+        "mtt2-ft-short-stacks",
+        "mtt2-deals",
+        "mtt2-hu-basics",
+        "mtt2-hu-pushfold",
+        "mtt2-pko-basics",
+        "mtt2-pko-calls"
+      ]
+    }
+  ],
+  "lessons": {
+    "mtt2-icm-calc": { "title": "ICMを自分で計算する", "summary": "Malmuth-Harville方式で、3人の賞金期待値を手で計算します。" },
+    "mtt2-risk-premium": { "title": "リスクプレミアムを数字で見る", "summary": "チップEVの50%に対し、ICMでは何%の勝率が必要になるかを表で確認します。" },
+    "mtt2-call-vs-shove": { "title": "ショーブとコールの非対称", "summary": "同じ相手でも、自分から押すときと受けるときで必要な条件が違う理由。" },
+    "mtt2-ante-pushfold": { "title": "アンティありのプッシュ／フォールド", "summary": "BBアンティでポットが増えると、オールインのレンジがどれだけ広がるか。" },
+    "mtt2-reshove": { "title": "リショーブ", "summary": "オープンに対する3betオールインの計算と、向いている手・スタック。" },
+    "mtt2-bubble-big": { "title": "バブル：ビッグスタック", "summary": "相手のコールが厳しい状況を使って、圧力をかける側の戦い方。" },
+    "mtt2-bubble-medium": { "title": "バブル：ミドルスタック", "summary": "最も動きにくいミドルスタックが、どこで戦いどこで降りるか。" },
+    "mtt2-bubble-short": { "title": "バブル：ショートスタック", "summary": "残りのbbとブラインドの回り方から、待つか押すかを決めます。" },
+    "mtt2-ft-payjumps": { "title": "ファイナルテーブルのペイジャンプ", "summary": "6人のFTで、スタックごとに必要な勝率がどう変わるかを計算します。" },
+    "mtt2-ft-short-stacks": { "title": "他のショートスタックを見る", "summary": "自分より短いスタックがいるとき、ICMの圧力はどれだけ増えるか。" },
+    "mtt2-deals": { "title": "ディールの計算", "summary": "チップチョップとICMチョップの違いと、交渉で確認すること。" },
+    "mtt2-hu-basics": { "title": "ヘッズアップの基本", "summary": "ICMが消えた2人の勝負で、レンジを大きく広げる理由。" },
+    "mtt2-hu-pushfold": { "title": "ヘッズアップのプッシュ／フォールド", "summary": "浅いスタックのヘッズアップで、押す側と受ける側のレンジの目安。" },
+    "mtt2-pko-basics": { "title": "PKOの基本", "summary": "プログレッシブ・ノックアウトのバウンティを、チップに換算して考えます。" },
+    "mtt2-pko-calls": { "title": "PKOのコール判断", "summary": "バウンティ込みの必要勝率と、カバーしているかどうかの重要性。" }
+  }
+}
