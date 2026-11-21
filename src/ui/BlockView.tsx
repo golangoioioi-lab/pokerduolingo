@@ -11,6 +11,8 @@ import { splitTerms } from '../domain/content/glossary';
 import { Term } from './Glossary';
 import { answerFx } from './fx';
 import { DiagramView } from './Diagrams';
+import { HandsOn } from './Interactive';
+import type { QuestionBlock } from '../domain/content/diagrams';
 
 /** Plain text with glossary terms underlined. */
 function Terms({ text }: { text: string }) {
@@ -141,8 +143,10 @@ export function Estimate({ block, onAnswer }: { block: Extract<Block, { t: 'esti
   );
 }
 
-export function Question({ block, onAnswer }: { block: Extract<Block, { t: 'quiz' | 'estimate' }>; onAnswer?: (correct: boolean) => void }) {
-  return block.t === 'quiz' ? <Quiz block={block} onAnswer={onAnswer} /> : <Estimate block={block} onAnswer={onAnswer} />;
+export function Question({ block, onAnswer }: { block: QuestionBlock; onAnswer?: (correct: boolean) => void }) {
+  if (block.t === 'quiz') return <Quiz block={block} onAnswer={onAnswer} />;
+  if (block.t === 'estimate') return <Estimate block={block} onAnswer={onAnswer} />;
+  return <HandsOn block={block} onAnswer={onAnswer} />;
 }
 
 export default function BlockView({ block, goTab, onAnswer }: { block: Block; goTab: (tab: string) => void; onAnswer?: (correct: boolean) => void }) {
@@ -235,6 +239,8 @@ export default function BlockView({ block, goTab, onAnswer }: { block: Block; go
           <span className="lb-try-go">{block.tab === 'train' ? '練習する' : block.tab === 'equity' ? '計算する' : '見る'}</span>
         </button>
       );
+    case 'play': case 'pick5': case 'showdown': case 'outs': case 'order': case 'rapid': case 'paint':
+      return <HandsOn block={block} onAnswer={onAnswer} />;
     default:
       return <DiagramView block={block} />;
   }

@@ -6,7 +6,7 @@ const ONBOARDED_KEY = 'hl.onboarded.v1';
 const LEVEL_KEY = 'hl.level.v1';
 
 export const LEVELS: { id: Level; title: string; sub: string; course: string }[] = [
-  { id: 'new', title: 'はじめて', sub: 'ルールから知りたい', course: 'beginner' },
+  { id: 'new', title: 'はじめて', sub: 'ルールから知りたい', course: 'play-first' },
   { id: 'rules', title: 'ルールは分かる', sub: '勝ち方を学びたい', course: 'basic' },
   { id: 'regular', title: 'よく遊ぶ', sub: '戦略を深めたい', course: 'intermediate' },
 ];

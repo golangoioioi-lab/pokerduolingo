@@ -3,218 +3,72 @@ import type { LessonBody } from '../../types';
 const lesson: LessonBody = {
   id: 'rb-starting-hands',
   blocks: [
-  {
-    "t": "p",
-    "text": "最初の2枚は全部で169種類に分類できます。まず形の呼び方、次に強さを確認しましょう。"
-  },
-  {
-    "t": "h",
-    "text": "3つの形"
-  },
-  {
-    "t": "list",
-    "items": [
-      "ペア：AA、77など。6通り",
-      "スーテッド：AKsなど。同じスートで4通り",
-      "オフスート：AKoなど。違うスートで12通り"
-    ]
-  },
-  {
-    "t": "combos",
-    "groups": [
-      {
-        "label": "AA",
-        "hands": [
-          "AA"
-        ]
-      },
-      {
-        "label": "AKs",
-        "hands": [
-          "AKs"
-        ]
-      },
-      {
-        "label": "AKo",
-        "hands": [
-          "AKo"
-        ]
-      }
-    ],
-    "caption": "AAは6通り、AKsは4通り、AKoは12通り。AKはあわせて16通り。"
-  },
-  {
-    "t": "p",
-    "text": "AAは出にくく、AKoは出やすい理由が分かります。なお、全体は1326通り（52 × 51 ÷ 2）です。"
-  },
-  {
-    "t": "h",
-    "text": "強い手の基準"
-  },
-  {
-    "t": "p",
-    "text": "強い手とは、ペアが高い、高いカードが2枚、同じスート、つながっている、のどれかを持つ手です。たとえば AA〜JJ と AK だけで 24 + 16 = 40通り、全体の約3%にすぎません。"
-  },
-  {
-    "t": "combos",
-    "groups": [
-      {
-        "label": "最強クラス",
-        "hands": [
-          "AA",
-          "KK",
-          "QQ",
-          "JJ",
-          "AK"
-        ]
-      },
-      {
-        "label": "プレイ可能",
-        "hands": [
-          "TT",
-          "99",
-          "AQs",
-          "KQs",
-          "JTs"
-        ]
-      }
-    ],
-    "caption": "強い手は全体のごく一部。"
-  },
-  {
-    "t": "h",
-    "text": "プレイアビリティ"
-  },
-  {
-    "t": "p",
-    "text": "スーテッドは、フラッシュの可能性があるぶん、勝率が2〜4%ほど上がります。一方、K2o のような弱い高カードは、強い手に支配されやすい手です。"
-  },
-  {
-    "t": "equity",
-    "players": [
-      {
-        "label": "AKs",
-        "cards": [
-          "As",
-          "Ks"
-        ],
-        "pct": 46
-      },
-      {
-        "label": "QQ",
-        "cards": [
-          "Qh",
-          "Qd"
-        ],
-        "pct": 54
-      }
-    ],
-    "caption": "AKsとQQは、ほぼ互角（目安）。"
-  },
-  {
-    "t": "try",
-    "text": "レンジ表で、BTNのオープンにどんな手が含まれているか確認しましょう。",
-    "tab": "ranges"
-  },
-  {
-    "t": "estimate",
-    "q": "A♥K♦（AKo）は何通りある？",
-    "min": 0,
-    "max": 20,
-    "answer": 12,
-    "tolerance": 0.5,
-    "explain": "ランクの組み合わせ4 × 3 = 12通りです。",
-    "hand": [
-      "Ah",
-      "Kd"
-    ],
-    "unit": "通り",
-    "step": 1
-  },
-  {
-    "t": "quiz",
-    "q": "組み合わせ（コンボ）が最も少ないのはどれ？",
-    "options": [
-      "A♠A♥（AA）",
-      "A♠K♠（AKs）",
-      "A♠K♦（AKo）"
-    ],
-    "answer": 1,
-    "explain": "AAは6通り、AKsは4通り、AKoは12通り。スーテッドが最も少なくなります。",
-    "optionCards": [
-      [
-        "As",
-        "Ah"
+    { t: 'h', text: '形を見分ける' },
+    {
+      t: 'rapid',
+      q: 'スーテッド（同じスート）？ オフスート？',
+      choices: ['スーテッド', 'オフスート'],
+      items: [
+        { cards: ['As', 'Ks'], answer: 0 },
+        { cards: ['Ah', 'Kd'], answer: 1 },
+        { cards: ['9h', '8h'], answer: 0 },
+        { cards: ['Jc', '7d'], answer: 1 },
+        { cards: ['5c', '4c'], answer: 0 },
+        { cards: ['Ts', '2d'], answer: 1 },
       ],
-      [
-        "As",
-        "Ks"
+    },
+    { t: 'p', text: '手札は**ペア**・**スーテッド**（例 AKs）・**オフスート**（例 AKo）の3つの形に分かれ、全部で169種類です。' },
+    {
+      t: 'combos',
+      groups: [
+        { label: 'AA', hands: ['AA'] },
+        { label: 'AKs', hands: ['AKs'] },
+        { label: 'AKo', hands: ['AKo'] },
       ],
-      [
-        "As",
-        "Kd"
-      ]
-    ]
-  },
-  {
-    "t": "quiz",
-    "q": "AKsとQQのプリフロップの勝率は？",
-    "options": [
-      "AKsが圧倒的に有利",
-      "ほぼ互角（QQがやや有利）",
-      "QQが圧倒的に有利",
-      "AKsが必ず勝つ"
-    ],
-    "answer": 1,
-    "explain": "ペアと高カード2枚はコインフリップで、QQが約54%です（目安）。",
-    "hand": [
-      "As",
-      "Ks"
-    ]
-  },
-  {
-    "t": "quiz",
-    "q": "スーテッド（同じスート）の手はどれ？",
-    "options": [
-      "A♠K♠",
-      "A♥K♦",
-      "Q♥Q♦",
-      "J♣7♦"
-    ],
-    "answer": 0,
-    "explain": "同じマークの2枚がスーテッドです。フラッシュの可能性が加わります。",
-    "optionCards": [
-      [
-        "As",
-        "Ks"
+      caption: 'ペア6通り、スーテッド4通り、オフスート12通り。',
+    },
+    {
+      t: 'estimate',
+      q: 'A♥K♦（AKo）は何通りある？',
+      hand: ['Ah', 'Kd'],
+      min: 0, max: 20, step: 1, unit: '通り', answer: 12, tolerance: 0.5,
+      explain: 'A が4枚 × K が3枚（同じスートを除く）= 12通りです。',
+    },
+    { t: 'h', text: '強い手はごく一部' },
+    {
+      t: 'combos',
+      groups: [
+        { label: '最強クラス', hands: ['AA', 'KK', 'QQ', 'JJ', 'AK'] },
+        { label: 'プレイ可能', hands: ['TT', '99', 'AQs', 'KQs', 'JTs'] },
       ],
-      [
-        "Ah",
-        "Kd"
+      caption: 'AA〜JJ と AK で40通り。全 1326 通りの約 3%。',
+    },
+    { t: 'p', text: '強い手は、高いペア・高いカード2枚・同じスート・つながり、のどれかを持っています。K2o のような弱い高カードは、強い手に負けやすい手です。' },
+    {
+      t: 'equity',
+      players: [
+        { label: 'AKs', cards: ['As', 'Ks'], pct: 46 },
+        { label: 'QQ', cards: ['Qh', 'Qd'], pct: 54 },
       ],
-      [
-        "Qh",
-        "Qd"
-      ],
-      [
-        "Jc",
-        "7d"
-      ]
-    ]
-  },
-  {
-    "t": "quiz",
-    "q": "スタート時の手札の組み合わせは全部で？",
-    "options": [
-      "169通り",
-      "2652通り",
-      "52通り",
-      "1326通り"
-    ],
-    "answer": 3,
-    "explain": "52 × 51 ÷ 2 = 1326通りです。"
-  }
-],
+      caption: 'AKs と QQ はほぼ互角（目安）。',
+    },
+    {
+      t: 'quiz',
+      q: '組み合わせ（コンボ）が最も少ないのは？',
+      options: ['AA', 'AKs', 'AKo'],
+      optionCards: [['As', 'Ah'], ['As', 'Ks'], ['As', 'Kd']],
+      answer: 1,
+      explain: 'AA は6通り、AKs は4通り、AKo は12通りです。',
+    },
+    { t: 'h', text: 'レンジを塗ってみる' },
+    {
+      t: 'paint',
+      spot: 'rfi-utg',
+      q: 'UTG でオープンする手を塗ってください。高いペア、A のスーテッド、強いブロードウェイが中心です。',
+      pass: 65,
+    },
+    { t: 'try', text: 'レンジ表で、席ごとにオープンする手を見比べましょう。', tab: 'ranges' },
+  ],
 };
 
 export default lesson;

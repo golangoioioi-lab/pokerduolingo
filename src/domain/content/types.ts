@@ -30,7 +30,37 @@ export type Block =
   /** Decision tree: each option's EV is computed from outcomes (prob sums to 1) unless `ev` is given. Units: `unit` (default bb). */
   | { t: 'tree'; unit?: string; root: string; options: { label: string; ev?: number; outcomes?: { label: string; prob: number; value: number }[]; note?: string }[]; caption?: string }
   /** Side-by-side comparison of two hands / boards / lines. */
-  | { t: 'compare'; left: CompareSide; right: CompareSide; caption?: string };
+  | { t: 'compare'; left: CompareSide; right: CompareSide; caption?: string }
+  // ── Hands-on blocks (the learner does something; answers are computed by the hand evaluator) ──
+  /** Guided hand, played street by street. Each step shows the table, narrates what happened (`say`) and may ask for a decision. Showdown is computed when villainCards is given. */
+  | { t: 'play'; title?: string; hero: Position; heroCards: string[]; villain?: Position; villainCards?: string[]; steps: PlayStep[]; outro?: string }
+  /** Tap the best 5 of the 7 cards (hand + board). */
+  | { t: 'pick5'; q?: string; hand: string[]; board: string[]; explain?: string }
+  /** Tap the winner at showdown (ties handled). */
+  | { t: 'showdown'; q?: string; board: string[]; players: { label: string; cards: string[] }[]; explain?: string }
+  /** Tap every unseen card that makes `target` or better. */
+  | { t: 'outs'; q?: string; hand: string[]; board: string[]; target: HandCategory; explain?: string }
+  /** Tap hands from strongest to weakest (each hand + board must make ≥5 cards). */
+  | { t: 'order'; q?: string; board?: string[]; hands: { label?: string; cards: string[] }[]; explain?: string }
+  /** Rapid-fire two-choice rounds (e.g. オープン / フォールド). Passed at `pass` % correct (default 80). */
+  | { t: 'rapid'; q: string; choices: [string, string]; items: RapidItem[]; pass?: number }
+  /** Paint an opening range on the 13×13 grid; scored against the app's chart for `spot`. */
+  | { t: 'paint'; spot: string; q?: string; pass?: number };
+
+export type HandCategory = 'ワンペア' | 'ツーペア' | 'スリーカード' | 'ストレート' | 'フラッシュ' | 'フルハウス' | 'フォーカード';
+export interface PlayStep {
+  street: Street;
+  /** Cards dealt on this street (flop 3, turn 1, river 1). */
+  board?: string[];
+  /** Pot (bb) in the middle at the decision, including any bet the learner is facing. */
+  pot: number;
+  /** What happened, in one or two short sentences. */
+  say: string;
+  /** Optional decision. Exactly the options with good: true are correct. */
+  q?: string;
+  options?: { label: string; good: boolean; why: string }[];
+}
+export interface RapidItem { cards?: string[]; board?: string[]; text?: string; answer: 0 | 1; why?: string }
 
 export type Position = 'UTG' | 'HJ' | 'CO' | 'BTN' | 'SB' | 'BB';
 export type Street = 'プリフロップ' | 'フロップ' | 'ターン' | 'リバー' | 'ショーダウン';

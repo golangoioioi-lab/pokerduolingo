@@ -1,6 +1,7 @@
 import './theme/loop.css';
 import './theme/fx.css';
 import './theme/diagrams.css';
+import './theme/interactive.css';
 import { IonApp, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Navigate, Route, useLocation } from 'react-router-dom';

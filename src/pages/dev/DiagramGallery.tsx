@@ -15,6 +15,20 @@ const SAMPLES: Block[] = [
   { t: 'compare', left: { title: 'ドライなボード', board: ['Kd', '7c', '2s'], points: ['ドローがほとんどない', '小さいベットを多く'], verdict: 'good' }, right: { title: 'つながったボード', board: ['9h', '8h', '7c'], points: ['ドローが多い', 'ベット頻度を下げる'], verdict: 'bad' } },
   { t: 'quiz', q: 'どちらのハンドが強い？', board: ['Kh', '9h', '4c', '2d', '7s'], options: ['トップペア', 'ツーペア'], optionCards: [['Ks', 'Qd'], ['9c', '4d']], answer: 1, explain: '9と4のツーペアのほうが強いです。' },
   { t: 'estimate', q: 'ポット 100 に 50 のベット。コールに必要な勝率は？', min: 0, max: 60, unit: '%', answer: 25, tolerance: 3, explain: '50 ÷（100＋50＋50）＝25%。' },
+  { t: 'play', title: 'BTN で AK をオープン', hero: 'BTN', heroCards: ['Ah', 'Kd'], villain: 'BB', villainCards: ['Qs', 'Jc'], steps: [
+    { street: 'プリフロップ', pot: 1.5, say: 'CO までフォールド。あなたは BTN で **A♥K♦**。', q: 'どうする？', options: [{ label: 'フォールド', good: false, why: 'AK は最上位クラスです。' }, { label: 'コール', good: false, why: '先にレイズしたほうが主導権を取れます。' }, { label: '2.5bb レイズ', good: true, why: '強いハンドはレイズで入ります。' }] },
+    { street: 'フロップ', board: ['Kc', '8d', '3s'], pot: 5.5, say: 'BB がコール。フロップは **K-8-3**。BB はチェック。', q: 'トップペア。どうする？', options: [{ label: 'チェック', good: false, why: '弱いハンドからも払ってもらえます。' }, { label: '2bb ベット', good: true, why: '小さく打ってバリューを取ります。' }] },
+    { street: 'ターン', board: ['5h'], pot: 9.5, say: 'BB がコール。ターンは **5**。' },
+    { street: 'リバー', board: ['2c'], pot: 9.5, say: 'リバーは **2**。BB はチェック。', q: 'どうする？', options: [{ label: 'チェック', good: true, why: 'ここは様子見でも十分。' }, { label: 'オールイン', good: false, why: '強い手にしか払われません。' }] },
+  ], outro: '強い手はレイズで入り、トップペアは小さくバリューを取ります。' },
+  { t: 'pick5', hand: ['Ah', '9h'], board: ['Kh', '7h', '2h', '2c', '2d'] },
+  { t: 'showdown', board: ['Ah', 'Kd', '7s', '7c', '2h'], players: [{ label: 'あなた', cards: ['Ac', 'Qd'] }, { label: '相手', cards: ['Kc', 'Kh'] }], explain: 'K のフルハウスが勝ちます。' },
+  { t: 'outs', hand: ['Ah', 'Kh'], board: ['7h', '2h', 'Qc'], target: 'フラッシュ', explain: 'ハートは13枚。見えている4枚を引いて残り9枚です。' },
+  { t: 'order', board: ['Ah', 'Kd', '7s', '4c', '2h'], hands: [{ label: 'トップペア', cards: ['Ac', 'Qd'] }, { label: 'セット', cards: ['7c', '7d'] }, { label: '?', cards: ['3c', '5d'] }] },
+  { t: 'rapid', q: 'UTG でオープンする？', choices: ['オープン', 'フォールド'], items: [
+    { cards: ['As', 'Kd'], answer: 0 }, { cards: ['7c', '2d'], answer: 1, why: 'どの席でもフォールドです。' }, { cards: ['Qh', 'Qd'], answer: 0 }, { cards: ['Kc', '9d'], answer: 1, why: 'UTG では K9o は弱すぎます。' }, { cards: ['5s', '5h'], answer: 0 },
+  ] },
+  { t: 'paint', spot: 'rfi-utg' },
 ];
 
 export default function DiagramGallery() {

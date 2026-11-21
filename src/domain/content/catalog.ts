@@ -3,6 +3,85 @@ import type { Course } from './types';
 
 export const COURSES: Course[] = [
   {
+    "id": "play-first",
+    "title": "遊んで覚えるポーカー",
+    "level": "初心者",
+    "symbol": "遊",
+    "description": "説明を読む前に、カードを触ってハンドを遊びながらテキサスホールデムを覚えます。",
+    "lessons": [
+      {
+        "id": "pf-cards",
+        "title": "カードと役を触ってみる",
+        "minutes": 3,
+        "summary": "手札2枚と場の5枚から、一番強い5枚を選んでみます。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-hand-ranks",
+        "title": "どっちが強い？",
+        "minutes": 3,
+        "summary": "役の強さと、同じ役どうしの比べ方をタップで覚えます。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-first-hand",
+        "title": "1ハンド通しで遊ぶ",
+        "minutes": 3,
+        "summary": "ブラインドからショーダウンまで、1ハンドを最後まで遊びます。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-fold",
+        "title": "フォールドも勝ち方",
+        "minutes": 3,
+        "summary": "弱い手を降りてチップを守る判断を体験します。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-bet-call",
+        "title": "ベットとコール",
+        "minutes": 3,
+        "summary": "払う額ともらえる額から、コールするかを決めてみます。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-draws",
+        "title": "ドローを追う",
+        "minutes": 3,
+        "summary": "あと1枚で完成する手のアウツを数え、追うか降りるかを決めます。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-starting-hands",
+        "title": "強い手を選んで参加",
+        "minutes": 3,
+        "summary": "どの手で参加するかを、席ごとにスピード判定で覚えます。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-position",
+        "title": "後ろの席は有利",
+        "minutes": 3,
+        "summary": "相手の動きを見てから決められる BTN の有利さを体験します。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-bluff",
+        "title": "ブラフの気持ち",
+        "minutes": 3,
+        "summary": "役がなくてもベットで相手を降ろして勝つ場面を体験します。",
+        "tier": "free"
+      },
+      {
+        "id": "pf-graduation",
+        "title": "卒業試合",
+        "minutes": 3,
+        "summary": "ここまでの内容を使って、長めのハンドとスピード判定に挑戦します。",
+        "tier": "free"
+      }
+    ]
+  },
+  {
     "id": "beginner",
     "title": "はじめてのポーカー",
     "level": "初心者",
@@ -82,21 +161,21 @@ export const COURSES: Course[] = [
       {
         "id": "table-manners",
         "title": "マナーとルール",
-        "minutes": 5,
+        "minutes": 3,
         "summary": "ライブとオンラインで気をつけること。",
         "tier": "free"
       },
       {
         "id": "beginner-mistakes",
         "title": "初心者がやりがちなミス",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "よくある6つのミスと、代わりにすること。",
         "tier": "free"
       },
       {
         "id": "first-session",
         "title": "はじめて実戦で遊ぶ前に",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "無料プレイから始め、無理のない範囲で。",
         "tier": "free"
       }
@@ -212,7 +291,7 @@ export const COURSES: Course[] = [
       {
         "id": "implied-odds",
         "title": "インプライドオッズ",
-        "minutes": 4,
+        "minutes": 5,
         "summary": "あとで勝てる額まで含めてコールを判断する。",
         "tier": "free"
       },
@@ -247,7 +326,7 @@ export const COURSES: Course[] = [
       {
         "id": "ace-x-hands",
         "title": "Ax ハンドの扱い",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "強いAと、ドミネートされやすいAの違い。",
         "tier": "free"
       },
@@ -312,7 +391,7 @@ export const COURSES: Course[] = [
       {
         "id": "preflop-probabilities",
         "title": "プリフロップの確率",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ペアやAKが配られる確率、後ろにAAがいる確率。",
         "tier": "pro"
       },
@@ -333,7 +412,7 @@ export const COURSES: Course[] = [
       {
         "id": "decision-trees",
         "title": "判断を分岐で考える",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "選択肢を書き出してEVを比べる。",
         "tier": "pro"
       },
@@ -484,7 +563,7 @@ export const COURSES: Course[] = [
       {
         "id": "live-reading-players",
         "title": "相手の一般的な傾向を観察する",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "細かなクセではなく、プレイの頻度とベットの傾向から、相手のタイプを見分けます。",
         "tier": "free"
       },
@@ -505,7 +584,7 @@ export const COURSES: Course[] = [
       {
         "id": "live-etiquette",
         "title": "ライブのマナーとエチケット",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ショーダウンの順番、カードの扱い、会話の注意など、気持ちよく遊ぶための決まりごとです。",
         "tier": "free"
       },
@@ -577,7 +656,7 @@ export const COURSES: Course[] = [
       {
         "id": "multiway-pots",
         "title": "マルチウェイポット",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "3人以上ではバリューを厳しく、ブラフを減らす。",
         "tier": "pro"
       },
@@ -591,14 +670,14 @@ export const COURSES: Course[] = [
       {
         "id": "paired-boards",
         "title": "ペアボードの戦い方",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "コンボ数と、小さく広いCベットの理由。",
         "tier": "pro"
       },
       {
         "id": "monotone-boards",
         "title": "モノトーンボード",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "同スート3枚でのサイズとブロッカー。",
         "tier": "pro"
       },
@@ -633,14 +712,14 @@ export const COURSES: Course[] = [
       {
         "id": "probe-bet",
         "title": "プローブベット",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "相手が見送った後、OOPからターンで攻める。",
         "tier": "pro"
       },
       {
         "id": "float",
         "title": "フロート",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "IPでコールし、ターン以降にポットを奪う。",
         "tier": "pro"
       },
@@ -684,14 +763,14 @@ export const COURSES: Course[] = [
       {
         "id": "hr-03",
         "title": "ナッツドローでチェックレイズ",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "BBでナッツフラッシュドローをセミブラフで打ち切る。",
         "tier": "pro"
       },
       {
         "id": "hr-04",
         "title": "3betポットのQQ",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "SPRが小さい3betポットでオーバーペアを判断する。",
         "tier": "pro"
       },
@@ -712,7 +791,7 @@ export const COURSES: Course[] = [
       {
         "id": "hr-07",
         "title": "マルチウェイの弱いトップペア",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "3人でのK9をポットを小さく保って扱う。",
         "tier": "pro"
       },
@@ -756,14 +835,14 @@ export const COURSES: Course[] = [
       {
         "id": "stack-depth-bb",
         "title": "スタックをbbで考える",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "bb数のゾーンごとに戦い方が変わる。",
         "tier": "pro"
       },
       {
         "id": "push-fold",
         "title": "プッシュ／フォールド",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "10bb前後でオールインかフォールドに絞る理由。",
         "tier": "pro"
       },
@@ -798,14 +877,14 @@ export const COURSES: Course[] = [
       {
         "id": "late-stage-steals",
         "title": "終盤のスチールとリスチール",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "15〜25bbでの3betオールインの損益。",
         "tier": "pro"
       },
       {
         "id": "satellites",
         "title": "サテライト",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "全シート同価値の大会で強い手を降りる理由。",
         "tier": "pro"
       },
@@ -949,42 +1028,42 @@ export const COURSES: Course[] = [
       {
         "id": "srp-oop-cbet-basics",
         "title": "OOPのc-betの基本",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ポジションがないときにc-betを減らし、手を選ぶ考え方を学びます。",
         "tier": "free"
       },
       {
         "id": "srp-cbet-sizing",
         "title": "c-betのサイズ選び",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "小さいサイズと大きいサイズを、必要勝率とボードで使い分けます。",
         "tier": "pro"
       },
       {
         "id": "srp-range-bet",
         "title": "レンジベット",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ほぼ全部の手で小さく打つレンジベットが成立する条件を見ます。",
         "tier": "pro"
       },
       {
         "id": "srp-polar-bet",
         "title": "ポラライズドベット",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "強い手とブラフだけで大きく打つ戦略と、その比率を学びます。",
         "tier": "pro"
       },
       {
         "id": "srp-check-back-ip",
         "title": "IPのチェックバック",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "チェックバックする手と理由、ターンへのつなげ方を整理します。",
         "tier": "pro"
       },
       {
         "id": "srp-ak-high-boards",
         "title": "A・Kハイボードのc-bet",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "AハイやKハイのドライなボードでの打ち方と、BBの守り方です。",
         "tier": "pro"
       },
@@ -1012,7 +1091,7 @@ export const COURSES: Course[] = [
       {
         "id": "srp-float-ip",
         "title": "フロートの基本",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "インポジションで弱い手をコールし、ターンで取りに行く戦略です。",
         "tier": "pro"
       },
@@ -1026,21 +1105,21 @@ export const COURSES: Course[] = [
       {
         "id": "srp-check-raise-oop",
         "title": "OOPのチェックレイズ",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "チェックレイズの目的、サイズ、手の選び方を整理します。",
         "tier": "pro"
       },
       {
         "id": "srp-bb-vs-btn-flop",
         "title": "BB対BTNのフロップ",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "最も多い対戦で、BBがどう守りどうレイズするかをまとめます。",
         "tier": "pro"
       },
       {
         "id": "srp-turn-after-flop-cbet",
         "title": "c-bet後のターン",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "フロップのc-betがコールされた後、ターンでどう続けるかを学びます。",
         "tier": "pro"
       }
@@ -1112,21 +1191,21 @@ export const COURSES: Course[] = [
       {
         "id": "3bp-stack-off-thresholds",
         "title": "全額を入れる基準",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "必要勝率と相手のレンジから、スタックを入れる手を決めます。",
         "tier": "pro"
       },
       {
         "id": "3bp-draws",
         "title": "3betポットのドロー",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "インプライドオッズが小さい場面での、セミブラフ中心のドローの使い方です。",
         "tier": "pro"
       },
       {
         "id": "3bp-turn-play",
         "title": "3betポットのターン",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ターンのサイズがリバーのSPRを決めることを意識して打ちます。",
         "tier": "pro"
       },
@@ -1149,7 +1228,7 @@ export const COURSES: Course[] = [
       {
         "id": "hr2-01",
         "title": "UTG の AA、濡れたボードで3ストリート",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "UTG の AA で BTN のコールを受け、ドローの多いボードでポットを育てるサイズを考えます。",
         "tier": "free"
       },
@@ -1170,7 +1249,7 @@ export const COURSES: Course[] = [
       {
         "id": "hr2-04",
         "title": "BB vs SB、OESD のレイズからストレート完成",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ブラインド同士の戦いで、ドローのレイズとストレート完成後のバリューベットを扱います。",
         "tier": "pro"
       },
@@ -1205,14 +1284,14 @@ export const COURSES: Course[] = [
       {
         "id": "hr2-09",
         "title": "BB のトップペア、リバーのオーバーベットに降りる",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "UTG のオーバーベットをコンボで数え、ブラフが足りないときに降りる練習です。",
         "tier": "pro"
       },
       {
         "id": "hr2-10",
         "title": "HJ の KK、4ベットポットの低 SPR",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "4ベットポットで小さく打ち、オールインを受けたときの必要勝率を計算します。",
         "tier": "pro"
       },
@@ -1261,7 +1340,7 @@ export const COURSES: Course[] = [
       {
         "id": "hr2-17",
         "title": "BB の JTs、ターンのチェックレイズ・セミブラフ",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "15アウツのドローで、コールとチェックレイズの期待値を比べます。",
         "tier": "pro"
       },
@@ -1275,14 +1354,14 @@ export const COURSES: Course[] = [
       {
         "id": "hr2-19",
         "title": "BB の 87s、リバーでナッツをリードする",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "BTN がターンをチェックで回したとき、完成したストレートを自分から打つ理由です。",
         "tier": "pro"
       },
       {
         "id": "hr2-20",
         "title": "BTN の 99、SB の 3ベットポットでポットを管理する",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "3ベットポットで中くらいの強さのペアを、チェックと小さいベットで扱います。",
         "tier": "pro"
       }
@@ -1377,21 +1456,21 @@ export const COURSES: Course[] = [
       {
         "id": "opp-stats-basics",
         "title": "スタッツで相手を読む",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "VPIP・PFR・3bet・AFの意味と、何ハンドで信用できるかを学びます。",
         "tier": "free"
       },
       {
         "id": "opp-player-map",
         "title": "4つのタイプの地図",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "タイト／ルースとパッシブ／アグレッシブの2軸で相手を分類します。",
         "tier": "free"
       },
       {
         "id": "opp-tight-passive",
         "title": "タイトパッシブへの対応",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "参加が少なくベットもしない相手から、ブラインドとポットを取る方法。",
         "tier": "pro"
       },
@@ -1405,56 +1484,56 @@ export const COURSES: Course[] = [
       {
         "id": "opp-station-bluffs",
         "title": "ステーションにブラフしない",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "フォールド率からブラフのEVを計算し、ブラフを減らす理由を確認します。",
         "tier": "pro"
       },
       {
         "id": "opp-tag",
         "title": "TAGとの戦い方",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "基本に忠実な相手には、レンジの読みやすさを逆に使います。",
         "tier": "pro"
       },
       {
         "id": "opp-lag",
         "title": "LAGとの戦い方",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "広く攻める相手には、3betとコールダウンを広げて対抗します。",
         "tier": "pro"
       },
       {
         "id": "opp-maniac",
         "title": "マニアックへの対応",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "何でも打つ相手には、自分からは打たずに受けて取ります。",
         "tier": "pro"
       },
       {
         "id": "opp-nit",
         "title": "ニットへの対応",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "強い手しか続けない相手には、スチールを増やし、反撃には素直に降ります。",
         "tier": "pro"
       },
       {
         "id": "opp-recreational",
         "title": "レクリエーショナルプレイヤー",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "楽しみで遊ぶ相手の特徴と、長く同じ卓で戦うための考え方。",
         "tier": "pro"
       },
       {
         "id": "opp-live-reads",
         "title": "スタッツがないときの読み",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ライブや初対面の相手を、ショーダウンとベットの癖から分類します。",
         "tier": "pro"
       },
       {
         "id": "opp-adjust-limits",
         "title": "エクスプロイトの限界",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "サンプル不足、相手の調整、自分の偏りなど、読みすぎの落とし穴。",
         "tier": "pro"
       }
@@ -1484,7 +1563,7 @@ export const COURSES: Course[] = [
       {
         "id": "river-overbet",
         "title": "リバーのオーバーベット",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "ポットより大きく打てる条件とブラフの割合。",
         "tier": "pro"
       },
@@ -1498,7 +1577,7 @@ export const COURSES: Course[] = [
       {
         "id": "range-construction",
         "title": "レンジの組み立て",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "サイズごとのバリューとブラフの比率。",
         "tier": "pro"
       },
@@ -1526,7 +1605,7 @@ export const COURSES: Course[] = [
       {
         "id": "equity-realization",
         "title": "エクイティの実現率",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "勝率どおりに稼げない手と、その理由。",
         "tier": "pro"
       },
@@ -1591,7 +1670,7 @@ export const COURSES: Course[] = [
       {
         "id": "tr-overcard-turns",
         "title": "オーバーカードはだれの味方か",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "AやKのターンがレイザーに有利になる理由をコンボで確かめ、バレルとディフェンスを考えます。",
         "tier": "free"
       },
@@ -1626,7 +1705,7 @@ export const COURSES: Course[] = [
       {
         "id": "tr-turn-check-raise",
         "title": "ターンのチェックレイズ",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "リバーのオールインまで見越したチェックレイズのレンジと、受けた側の計算を学びます。",
         "tier": "pro"
       },
@@ -1647,14 +1726,14 @@ export const COURSES: Course[] = [
       {
         "id": "tr-thin-value",
         "title": "リバーの薄いバリューベット",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "コールされたときに過半数に勝つかで判断し、小さいサイズで価値を取ります。",
         "tier": "pro"
       },
       {
         "id": "tr-river-sizing",
         "title": "リバーのベットサイズを選ぶ",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "レンジの形と相手のレンジから、小さいサイズと大きいサイズを使い分けます。",
         "tier": "pro"
       },
@@ -1668,7 +1747,7 @@ export const COURSES: Course[] = [
       {
         "id": "tr-mdf-bluffcatch",
         "title": "MDFでブラフキャッチの範囲を決める",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "MDFでレンジに線を引き、相手のブラフの量に合わせて線を動かします。",
         "tier": "pro"
       },
@@ -1698,42 +1777,42 @@ export const COURSES: Course[] = [
       {
         "id": "mtt2-icm-calc",
         "title": "ICMを自分で計算する",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "Malmuth-Harville方式で、3人の賞金期待値を手で計算します。",
         "tier": "free"
       },
       {
         "id": "mtt2-risk-premium",
         "title": "リスクプレミアムを数字で見る",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "チップEVの50%に対し、ICMでは何%の勝率が必要になるかを表で確認します。",
         "tier": "free"
       },
       {
         "id": "mtt2-call-vs-shove",
         "title": "ショーブとコールの非対称",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "同じ相手でも、自分から押すときと受けるときで必要な条件が違う理由。",
         "tier": "pro"
       },
       {
         "id": "mtt2-ante-pushfold",
         "title": "アンティありのプッシュ／フォールド",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "BBアンティでポットが増えると、オールインのレンジがどれだけ広がるか。",
         "tier": "pro"
       },
       {
         "id": "mtt2-reshove",
         "title": "リショーブ",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "オープンに対する3betオールインの計算と、向いている手・スタック。",
         "tier": "pro"
       },
       {
         "id": "mtt2-bubble-big",
         "title": "バブル：ビッグスタック",
-        "minutes": 3,
+        "minutes": 4,
         "summary": "相手のコールが厳しい状況を使って、圧力をかける側の戦い方。",
         "tier": "pro"
       },
@@ -1747,7 +1826,7 @@ export const COURSES: Course[] = [
       {
         "id": "mtt2-bubble-short",
         "title": "バブル：ショートスタック",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "残りのbbとブラインドの回り方から、待つか押すかを決めます。",
         "tier": "pro"
       },
@@ -1782,7 +1861,7 @@ export const COURSES: Course[] = [
       {
         "id": "mtt2-hu-pushfold",
         "title": "ヘッズアップのプッシュ／フォールド",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "浅いスタックのヘッズアップで、押す側と受ける側のレンジの目安。",
         "tier": "pro"
       },
@@ -1826,7 +1905,7 @@ export const COURSES: Course[] = [
       {
         "id": "bankroll-mtt",
         "title": "資金管理（トーナメント）",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "ぶれの大きいトーナメントに必要な資金の目安。",
         "tier": "pro"
       },
@@ -1847,7 +1926,7 @@ export const COURSES: Course[] = [
       {
         "id": "study-plan",
         "title": "上達のための学習計画",
-        "minutes": 5,
+        "minutes": 3,
         "summary": "理論・練習・振り返りの週間計画。",
         "tier": "pro"
       },
@@ -1861,7 +1940,7 @@ export const COURSES: Course[] = [
       {
         "id": "healthy-play",
         "title": "健全に楽しむために",
-        "minutes": 5,
+        "minutes": 3,
         "summary": "時間とお金の上限、問題のサインと相談先。",
         "tier": "pro"
       }
@@ -1933,7 +2012,7 @@ export const COURSES: Course[] = [
       {
         "id": "drill-implied-odds",
         "title": "インプライドオッズのドリル",
-        "minutes": 4,
+        "minutes": 3,
         "summary": "あと何bb勝てればコールが割に合うかを計算する。",
         "tier": "pro"
       },

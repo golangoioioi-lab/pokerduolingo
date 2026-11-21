@@ -2,6 +2,7 @@
 // so a lesson's text and its picture can never disagree.
 import type { Block } from './types';
 import { parseCard } from '../poker/cards';
+import { validateInteractive } from './interactive';
 
 export const RANKS = 'AKQJT98765432';
 const SUITS = 'shdc';
@@ -123,6 +124,8 @@ export function validateDiagram(b: Block): string[] {
         if (side.points.length === 0) e.push(`compare "${side.title}": no points`);
       }
       break;
+    default:
+      e.push(...validateInteractive(b));
   }
   return e;
 }
@@ -131,4 +134,8 @@ export const DIAGRAM_TYPES = ['pot', 'equity', 'odds', 'seats', 'combos', 'timel
 export const isDiagram = (b: Block) => (DIAGRAM_TYPES as readonly string[]).includes(b.t) || b.t === 'cards' || b.t === 'range';
 
 /** Blocks the learner answers (count toward XP and spaced repetition). */
-export const isQuestion = (b: Block): b is Extract<Block, { t: 'quiz' | 'estimate' }> => b.t === 'quiz' || b.t === 'estimate';
+export const QUESTION_TYPES = ['quiz', 'estimate', 'play', 'pick5', 'showdown', 'outs', 'order', 'rapid', 'paint'] as const;
+export type QuestionBlock = Extract<Block, { t: (typeof QUESTION_TYPES)[number] }>;
+export const isQuestion = (b: Block): b is QuestionBlock => (QUESTION_TYPES as readonly string[]).includes(b.t);
+/** Hands-on blocks (the learner plays / taps rather than picks an option). */
+export const isHandsOn = (b: Block) => isQuestion(b) && b.t !== 'quiz' && b.t !== 'estimate';

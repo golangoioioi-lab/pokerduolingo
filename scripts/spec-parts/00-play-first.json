@@ -1,0 +1,35 @@
+{
+  "courses": [
+    {
+      "id": "play-first",
+      "title": "遊んで覚えるポーカー",
+      "level": "初心者",
+      "symbol": "遊",
+      "description": "説明を読む前に、カードを触ってハンドを遊びながらテキサスホールデムを覚えます。",
+      "lessons": [
+        "pf-cards",
+        "pf-hand-ranks",
+        "pf-first-hand",
+        "pf-fold",
+        "pf-bet-call",
+        "pf-draws",
+        "pf-starting-hands",
+        "pf-position",
+        "pf-bluff",
+        "pf-graduation"
+      ]
+    }
+  ],
+  "lessons": {
+    "pf-cards": { "title": "カードと役を触ってみる", "summary": "手札2枚と場の5枚から、一番強い5枚を選んでみます。" },
+    "pf-hand-ranks": { "title": "どっちが強い？", "summary": "役の強さと、同じ役どうしの比べ方をタップで覚えます。" },
+    "pf-first-hand": { "title": "1ハンド通しで遊ぶ", "summary": "ブラインドからショーダウンまで、1ハンドを最後まで遊びます。" },
+    "pf-fold": { "title": "フォールドも勝ち方", "summary": "弱い手を降りてチップを守る判断を体験します。" },
+    "pf-bet-call": { "title": "ベットとコール", "summary": "払う額ともらえる額から、コールするかを決めてみます。" },
+    "pf-draws": { "title": "ドローを追う", "summary": "あと1枚で完成する手のアウツを数え、追うか降りるかを決めます。" },
+    "pf-starting-hands": { "title": "強い手を選んで参加", "summary": "どの手で参加するかを、席ごとにスピード判定で覚えます。" },
+    "pf-position": { "title": "後ろの席は有利", "summary": "相手の動きを見てから決められる BTN の有利さを体験します。" },
+    "pf-bluff": { "title": "ブラフの気持ち", "summary": "役がなくてもベットで相手を降ろして勝つ場面を体験します。" },
+    "pf-graduation": { "title": "卒業試合", "summary": "ここまでの内容を使って、長めのハンドとスピード判定に挑戦します。" }
+  }
+}

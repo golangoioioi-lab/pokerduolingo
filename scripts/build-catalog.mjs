@@ -19,7 +19,10 @@ const lessonsDir = join(root, 'src/domain/content/lessons');
 
 // Courses are ordered by level (stable within a level), so the learning path reads easy → hard.
 const LEVEL_ORDER = ['初心者', '初級', '中級', '上級', '全レベル'];
-spec.courses.sort((a, b) => LEVEL_ORDER.indexOf(a.level) - LEVEL_ORDER.indexOf(b.level));
+// The play-first tutorial opens the app; then by level (stable within a level).
+const FIRST = ['play-first'];
+const rank = (c) => (FIRST.includes(c.id) ? -1 : LEVEL_ORDER.indexOf(c.level));
+spec.courses.sort((a, b) => rank(a) - rank(b));
 
 const missing = [];
 const courses = spec.courses.map((c) => {

@@ -4,8 +4,9 @@ import confetti from 'canvas-confetti';
 import { useEffect, useRef, useState } from 'react';
 import { load, save } from '../services/storage';
 
-const SOUND_KEY = 'hl.sound.v1';
-export const soundOn = () => load<boolean>(SOUND_KEY, true);
+// v2: sounds are off unless the learner turns them on (Settings).
+const SOUND_KEY = 'hl.sound.v2';
+export const soundOn = () => load<boolean>(SOUND_KEY, false);
 export const setSoundOn = (v: boolean) => save(SOUND_KEY, v);
 
 export const reducedMotion = () =>
@@ -78,38 +79,15 @@ function tone(freq: number, start: number, dur: number, type: OscillatorType = '
   o.stop(t + dur + 0.02);
 }
 
+// Short, soft sine blips only — no melodies, no buzzing counters.
 export const sfx = {
-  /** Bright two-note chime, a little higher with each combo step. */
-  correct(combo = 1) {
-    const lift = Math.min(combo - 1, 6) * 0.06;
-    tone(880 * (1 + lift), 0, 0.12, 'triangle');
-    tone(1320 * (1 + lift), 0.07, 0.22, 'triangle');
-  },
-  wrong() {
-    tone(196, 0, 0.18, 'square', 0.06);
-    tone(147, 0.08, 0.26, 'square', 0.05);
-  },
-  /** Rising arpeggio. */
-  complete() {
-    [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => tone(f, i * 0.09, 0.35, 'triangle', 0.14));
-  },
-  /** Arpeggio + sustained chord. */
-  levelUp() {
-    [392, 523.25, 659.25, 783.99, 1046.5].forEach((f, i) => tone(f, i * 0.08, 0.3, 'triangle', 0.13));
-    [523.25, 659.25, 783.99].forEach((f) => tone(f, 0.45, 0.9, 'sine', 0.08));
-  },
-  tap() {
-    tone(1200, 0, 0.05, 'sine', 0.05);
-  },
-  /** One short tick of the XP counter; pitch rises with progress (0..1). Fast ticks blur into a "drrrr". */
-  tick(progress: number) {
-    tone(520 + 700 * progress, 0, 0.03, 'square', 0.035);
-  },
-  /** Bell at the end of the count. */
-  ding() {
-    tone(1568, 0, 0.5, 'sine', 0.12);
-    tone(2093, 0.03, 0.45, 'sine', 0.06);
-  },
+  correct(_combo = 1) { tone(880, 0, 0.12, 'sine', 0.1); },
+  wrong() { tone(220, 0, 0.14, 'sine', 0.1); },
+  complete() { tone(660, 0, 0.18, 'sine', 0.09); tone(990, 0.08, 0.22, 'sine', 0.07); },
+  levelUp() { tone(660, 0, 0.18, 'sine', 0.09); tone(990, 0.08, 0.28, 'sine', 0.07); },
+  tap() { /* silent */ },
+  tick(_progress: number) { /* silent */ },
+  ding() { tone(1320, 0, 0.25, 'sine', 0.05); },
 };
 
 /** Animates a number from 0 (or its previous value) to `target`. */

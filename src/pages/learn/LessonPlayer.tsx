@@ -13,7 +13,7 @@ import { useAccount } from '../../services/account';
 import { canOpenLesson } from '../../services/access';
 import { usePaywall } from '../../ui/Paywall';
 import type { Block } from '../../domain/content/types';
-import { isQuestion } from '../../domain/content/diagrams';
+import { isHandsOn, isQuestion } from '../../domain/content/diagrams';
 
 const TAB_ROUTES: Record<string, string> = { train: '/practice', ranges: '/tools/ranges', equity: '/tools/equity' };
 
@@ -23,7 +23,10 @@ function toSteps(blocks: Block[]): Block[][] {
   let cur: Block[] = [];
   const flush = () => { if (cur.length) steps.push(cur); cur = []; };
   for (const b of blocks) {
-    if (b.t === 'h' || isQuestion(b)) flush();
+    // A heading and a short lead-in stay on the same screen as the question that follows.
+    const shortLead = cur.every((x) => x.t === 'h' || x.t === 'p')
+      && cur.reduce((n, x) => n + ('text' in x ? x.text.length : 0), 0) <= 160;
+    if (b.t === 'h' || (isQuestion(b) && !shortLead)) flush();
     cur.push(b);
     if (isQuestion(b)) flush();
   }
@@ -172,7 +175,7 @@ export default function LessonPlayer() {
                   <IonIcon slot="icon-only" icon={chevronBack} />
                 </IonButton>
                 <IonButton className="grow" disabled={needsAnswer} onClick={advance}>
-                  {needsAnswer ? '答えを選んでください' : i === steps.length - 1 ? '完了' : '次へ'}
+                  {needsAnswer ? (step.some(isHandsOn) ? '上で遊んでから進めます' : '答えを選んでください') : i === steps.length - 1 ? '完了' : '次へ'}
                 </IonButton>
               </div>
             )}

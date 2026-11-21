@@ -4,16 +4,15 @@ import {
 } from '@ionic/react';
 import { close } from 'ionicons/icons';
 import { Question } from '../../ui/BlockView';
-import { isQuestion } from '../../domain/content/diagrams';
+import { isQuestion, type QuestionBlock } from '../../domain/content/diagrams';
 import Celebration from '../../ui/Celebration';
 import { findLesson, getLessonBody } from '../../services/content';
 import { canOpenLesson } from '../../services/access';
 import { useAccount } from '../../services/account';
 import { dueCards, recordQuiz } from '../../services/review';
 import { XP, award, getGame, haptic, type AwardResult } from '../../services/game';
-import type { Block } from '../../domain/content/types';
 
-type QuizBlock = Extract<Block, { t: 'quiz' | 'estimate' }>;
+type QuizBlock = QuestionBlock;
 interface Item { lessonId: string; lessonTitle: string; index: number; quiz: QuizBlock }
 
 export default function ReviewSession() {
